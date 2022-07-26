@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>13.0.0</value>
+                <value>13.1.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,11 +42,15 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>dcc4445bf80d8124b60ce9852b57579d</value>
+                <value>110e6bc0378a528a1df37747df4adfce</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
                 <value>8F3156560D39B12C8362DF26A4C575BD</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -66,7 +70,7 @@
             <Rule name="Encounter date" path="/data[at0001]/items[at0004]"/>
             <Rule name="Reason for encounter" path="/data[at0001]/items[at0008]"/>
             <Rule name="Encounter Type" path="/data[at0001]/items[at0009]"/>
-            <Rule max="0" name="Patient ID" path="/data[at0001]/items[at0007]"/>
+            <Rule name="Patient ID" path="/data[at0001]/items[at0007]"/>
             <Rule max="0" path="/data[at0001]/items[at0016]">
                 <constraint xsi:type="tem:multipleConstraint">
                     <includedTypes>Identifier</includedTypes>
