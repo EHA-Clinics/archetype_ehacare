@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "1c1ee82bffdbc285f777921520c1b90e",
+      "MD5-CAM-1.0.1" : "a0ab93c613dca1f170f4817d07190fb7",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "7.0.0"
+      "sem_ver" : "8.0.0"
     },
     "details" : {
       "en" : {
@@ -653,8 +653,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "267024001",
-                                    "value" : "Abnormal weight loss"
+                                    "code" : "29857009",
+                                    "value" : "Chest pain"
                                   } ]
                                 } ]
                               } ],
@@ -736,8 +736,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "79890006",
-                                    "value" : "Anorexia"
+                                    "code" : "23924001",
+                                    "value" : "Chest tightness"
                                   } ]
                                 } ]
                               } ],
@@ -781,8 +781,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "386661006",
-                                    "value" : "Fever"
+                                    "code" : "10000006",
+                                    "value" : "Radiating chest pain"
                                   } ]
                                 } ]
                               } ],
