@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "82b9f54627165524747d5fee1e863b70",
+      "MD5-CAM-1.0.1" : "d73ebab7accef1adda6dc16938427a9d",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "14.0.0"
+      "sem_ver" : "15.0.0"
     },
     "details" : {
       "en" : {
@@ -1248,6 +1248,106 @@
                         } ]
                       } ],
                       "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.8",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.8",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "SNOMED-CT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "230145002",
+                                    "value" : "Difficulty breathing"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.7",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "SNOMED-CT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "261665006",
+                                    "value" : "Unknown"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "No",
+                                    "value" : "No"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "304213008",
+                                    "value" : "Low grade"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "426000000",
+                                    "value" : "High grade"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1320,6 +1420,12 @@
             "code" : "at0022.7",
             "text" : "symptom/sign 7",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
+          },
+          "at0022.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.8",
+            "text" : "symptom/sign 8",
+            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           }
         },
         "fi" : {
@@ -1363,6 +1469,12 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (6)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Specific symptom/sign #1 (7)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         },
@@ -1408,6 +1520,12 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (6)",
             "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
+          },
+          "at0022.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Specific symptom/sign #1 (7)",
+            "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
           }
         },
         "de" : {
@@ -1451,6 +1569,12 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (6)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Specific symptom/sign #1 (7)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         },
@@ -1496,6 +1620,12 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (6)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Specific symptom/sign #1 (7)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         },
         "sv" : {
@@ -1539,6 +1669,12 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (6)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Specific symptom/sign #1 (7)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         }
