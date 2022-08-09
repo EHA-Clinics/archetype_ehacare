@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "8697e06ab0a28646adda26ce4633818f",
+      "MD5-CAM-1.0.1" : "ead33f5548f0b233799470c3f650d86b",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "8.0.0"
+      "sem_ver" : "9.0.0"
     },
     "details" : {
       "en" : {
@@ -744,8 +744,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "79890006",
-                                    "value" : "Anorexia"
+                                    "code" : "41652007",
+                                    "value" : "Pain in eye"
                                   } ]
                                 } ]
                               } ],
@@ -789,8 +789,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "386661006",
-                                    "value" : "Fever"
+                                    "code" : "193967004",
+                                    "value" : "Swollen eyelids"
                                   } ]
                                 } ]
                               } ],
