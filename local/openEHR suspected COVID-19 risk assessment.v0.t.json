@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "3fe519b554e111a8ad136ba1172d01e7",
+      "MD5-CAM-1.0.1" : "2e9507b13e7f388a3be85123fb310b44",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "5.0.0"
+      "sem_ver" : "6.0.0"
     },
     "details" : {
       "en" : {
@@ -662,6 +662,44 @@
                             } ]
                           } ],
                           "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.2" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
@@ -770,10 +808,27 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "local"
+                                    "value" : "SNOMED-CT"
                                   },
-                                  "constraint" : [ "ac0.1" ],
-                                  "selectedTerminologies" : [ ]
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "261665006",
+                                    "value" : "Unknown"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "No",
+                                    "value" : "No"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "304213008",
+                                    "value" : "Low grade"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "426000000",
+                                    "value" : "High grade"
+                                  } ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -817,12 +872,6 @@
             "text" : "Symptom/sign 2",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Specific symptom/sign",
-            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
-          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
@@ -842,10 +891,10 @@
             "text" : "symptom/sign 3",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
           }
         },
@@ -862,10 +911,10 @@
             "text" : "Specific symptom/sign #1 (2)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
           }
         },
@@ -882,10 +931,10 @@
             "text" : "Specific symptom/sign #1 (2)",
             "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
           }
         },
@@ -902,10 +951,10 @@
             "text" : "Specific symptom/sign #1 (2)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
           }
         },
@@ -922,10 +971,10 @@
             "text" : "Specific symptom/sign #1 (2)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
           }
         },
@@ -942,10 +991,10 @@
             "text" : "Specific symptom/sign #1 (2)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
           }
         }
@@ -957,6 +1006,26 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.1",
           "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "ac0.3" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "ac0.3" ]
         }
       }
     },
@@ -1048,7 +1117,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "86457d16f1a912e31eb94631feed34e5"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.encounter_id.v0",
     "differential" : true,
