@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "20cbe212e42b5e7e6a04718da5786ffe",
+      "MD5-CAM-1.0.1" : "82b9f54627165524747d5fee1e863b70",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "13.0.0"
+      "sem_ver" : "14.0.0"
     },
     "details" : {
       "en" : {
@@ -1181,8 +1181,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "60845006",
-                                    "value" : "Breathlessness on exertion"
+                                    "code" : "161940008",
+                                    "value" : "Breathlessness on mild exertion"
                                   } ]
                                 } ]
                               } ],
