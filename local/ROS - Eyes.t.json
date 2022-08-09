@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "b695d0e1320fcc5277fb9b41d811991c",
+      "MD5-CAM-1.0.1" : "8697e06ab0a28646adda26ce4633818f",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "7.1.0"
+      "sem_ver" : "8.0.0"
     },
     "details" : {
       "en" : {
@@ -653,8 +653,16 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "267024001",
-                                    "value" : "Abnormal weight loss"
+                                    "code" : "193699007",
+                                    "value" : "Loss of vision - Both eyes"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "274571007",
+                                    "value" : "Loss of vision of the left eye"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "274572000",
+                                    "value" : "Loss of vision of the right eye"
                                   } ]
                                 } ]
                               } ],
