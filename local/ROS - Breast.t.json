@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "26d3921e7be62ee4afaac37cda7023cf",
+      "MD5-CAM-1.0.1" : "09a1c0f3f49f024efc49506a24219118",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "8.1.0"
+      "sem_ver" : "8.2.0"
     },
     "details" : {
       "en" : {
@@ -896,13 +896,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.1",
-            "text" : "Lump",
-            "description" : "Identification of a specific symptom or sign or grouping of symptoms or signs, by name.",
-            "comment" : "Coding of the 'Symptom/sign name' with a terminology is preferred, where possible."
           }
         },
         "fi" : {
