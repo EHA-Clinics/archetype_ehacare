@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "67da9b9c95984847f290525c706d9be6",
+      "MD5-CAM-1.0.1" : "26d3921e7be62ee4afaac37cda7023cf",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "8.0.0"
+      "sem_ver" : "8.1.0"
     },
     "details" : {
       "en" : {
@@ -869,7 +869,7 @@
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
-            "text" : "Symptom/sign 2",
+            "text" : "Abnormal discharge",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0000.1" : {
@@ -882,13 +882,13 @@
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
-            "text" : "Symptom/sign 1",
+            "text" : "Lump",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
           },
           "at0022.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.3",
-            "text" : "symptom/sign 3",
+            "text" : "Breast pain",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "ac0.2" : {
@@ -896,6 +896,13 @@
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Lump",
+            "description" : "Identification of a specific symptom or sign or grouping of symptoms or signs, by name.",
+            "comment" : "Coding of the 'Symptom/sign name' with a terminology is preferred, where possible."
           }
         },
         "fi" : {
