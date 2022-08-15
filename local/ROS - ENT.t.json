@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "4f098fe65234643000d65ae1fcbd7992",
+      "MD5-CAM-1.0.1" : "0c932d7ea0f929ac453a99c84a9a340c",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "9.0.0"
+      "sem_ver" : "9.1.0"
     },
     "details" : {
       "en" : {
@@ -1269,7 +1269,7 @@
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
-            "text" : "Symptom/sign 2",
+            "text" : "Drooling",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0000.1" : {
@@ -1282,13 +1282,13 @@
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
-            "text" : "Symptom/sign 1",
+            "text" : "Hearing loss",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
           },
           "at0022.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.3",
-            "text" : "symptom/sign 3",
+            "text" : "Hoarseness of the voice",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "ac0.2" : {
@@ -1300,25 +1300,25 @@
           "at0022.4" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.4",
-            "text" : "symptom/sign 4",
+            "text" : "Sore throat",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.5" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.5",
-            "text" : "symptom/sign 5",
+            "text" : "Foreign body in ear",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.6" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.6",
-            "text" : "symptom/sign 6",
+            "text" : "Foreign body in nostril",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.7" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.7",
-            "text" : "symptom/sign 7",
+            "text" : "Ringing in ear",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           }
         },
