@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "168543ca8a4438a27d83ee30231bc52f",
+      "MD5-CAM-1.0.1" : "c21c80ef56b30cc4d937b9fcfb5da56e",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "12.0.0"
+      "sem_ver" : "13.0.0"
     },
     "details" : {
       "en" : {
@@ -808,27 +808,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.20" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -908,27 +891,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.18" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -1008,27 +974,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.16" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -1108,27 +1057,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.14" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -1208,27 +1140,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.8" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -1308,27 +1223,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.10" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -1408,27 +1306,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.12" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -1488,7 +1369,7 @@
           "at0022.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.3",
-            "text" : "symptom/sign 3",
+            "text" : "Swollen eyelids",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "ac0.2" : {
@@ -1500,38 +1381,80 @@
           "at0022.4" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.4",
-            "text" : "symptom/sign 4",
+            "text" : "Yellowness of eyes",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.5" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.5",
-            "text" : "symptom/sign 5",
+            "text" : "Photophobia",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.6" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.6",
-            "text" : "symptom/sign 6",
+            "text" : "Redness",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.7" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.7",
-            "text" : "symptom/sign 7",
+            "text" : "Discharge from eye",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.8" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.8",
-            "text" : "symptom/sign 8",
+            "text" : "Tearing eye",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0022.9" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.9",
-            "text" : "symptom/sign 9",
+            "text" : "Blurry",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.14",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "fi" : {
@@ -1588,6 +1511,48 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (8)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "nb" : {
@@ -1644,6 +1609,48 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (8)",
             "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "de" : {
@@ -1700,6 +1707,48 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (8)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "it" : {
@@ -1756,6 +1805,48 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (8)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "sv" : {
@@ -1812,6 +1903,48 @@
             "code" : "at0022.1",
             "text" : "Specific symptom/sign #1 (8)",
             "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.10" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.10",
+            "description" : ""
+          },
+          "ac0.12" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.12",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         }
       },
@@ -1842,6 +1975,41 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.6",
           "members" : [ "ac0.3" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
+          "members" : [ "at0023", "at0024", "at0027" ]
         }
       }
     },
