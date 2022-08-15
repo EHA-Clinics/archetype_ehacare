@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "0b31a15d3d233fb0d1f56f86203aa290",
+      "MD5-CAM-1.0.1" : "168543ca8a4438a27d83ee30231bc52f",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "11.0.0"
+      "sem_ver" : "12.0.0"
     },
     "details" : {
       "en" : {
@@ -654,15 +654,7 @@
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "193699007",
-                                    "value" : "Loss of vision - Both eyes"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "274571007",
-                                    "value" : "Loss of vision of the left eye"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "274572000",
-                                    "value" : "Loss of vision of the right eye"
+                                    "value" : "Loss of vision"
                                   } ]
                                 } ]
                               } ],
@@ -1477,7 +1469,7 @@
           "at0022.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.1",
-            "text" : "Symptom/sign 2",
+            "text" : "Pain in eye",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "at0000.1" : {
@@ -1490,7 +1482,7 @@
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
-            "text" : "Symptom/sign 1",
+            "text" : "Loss of vision",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
           },
           "at0022.3" : {
