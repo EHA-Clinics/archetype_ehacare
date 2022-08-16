@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f8350f8422846a800adfcd731d33ae1c",
+      "MD5-CAM-1.0.1" : "07d297d4230896c11e47f8ed56a57384",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "7.1.0"
+      "sem_ver" : "8.0.0"
     },
     "details" : {
       "en" : {
@@ -653,8 +653,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "267024001",
-                                    "value" : "Abnormal weight loss"
+                                    "code" : "117511000119107",
+                                    "value" : "Urinary urgency"
                                   } ]
                                 } ]
                               } ],
@@ -736,11 +736,49 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "79890006",
-                                    "value" : "Anorexia"
+                                    "code" : "14302001",
+                                    "value" : "Absence of menstruation"
                                   } ]
                                 } ]
                               } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.7" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_TEXT",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_BOOLEAN",
+                              "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -781,8 +819,8 @@
                                   "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
-                                    "code" : "386661006",
-                                    "value" : "Fever"
+                                    "code" : "289894009",
+                                    "value" : "Menstrual bleeding present"
                                   } ]
                                 } ]
                               } ],
@@ -793,7 +831,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0005.1",
+                          "nodeId" : "at0005.3",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "value",
@@ -808,27 +846,10 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
-                                    "value" : "SNOMED-CT"
+                                    "value" : "local"
                                   },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "261665006",
-                                    "value" : "Unknown"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "No",
-                                    "value" : "No"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "304213008",
-                                    "value" : "Low grade"
-                                  }, {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "426000000",
-                                    "value" : "High grade"
-                                  } ]
+                                  "constraint" : [ "ac0.8" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -866,136 +887,136 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Symptom/sign 2",
-            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
-          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Constitutional",
+            "text" : "Genitourinary",
             "description" : "Series of questions and associated answers used to screen for symptoms or signs.",
             "comment" : "The answers may be self-reported."
           },
           "at0022.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
-            "text" : "Symptom/sign 1",
+            "text" : "Urinary urgency",
             "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.3",
-            "text" : "symptom/sign 3",
-            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
           },
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Absence of menstruation",
+            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.3",
+            "text" : "Menstrual bleeding present",
+            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relevant for the screening purpose."
           }
         },
         "fi" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1 (2)",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Oire / tuntemus ryhmitys (2)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Oire / tuntemus ryhmitys (3)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         },
         "nb" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1",
-            "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1 (2)",
-            "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
-          },
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Spesifikt symptom/sykdomstegn (2)",
+            "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Spesifikt symptom/sykdomstegn (3)",
+            "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
           }
         },
         "de" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1 (2)",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Spezifisches Symptom/Anzeichen (2)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Spezifisches Symptom/Anzeichen (3)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         },
         "it" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1 (2)",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Sintomo/segno specifico (2)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Sintomo/segno specifico (3)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         },
         "sv" : {
-          "at0022.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
-          "at0022.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022.1",
-            "text" : "Specific symptom/sign #1 (2)",
-            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
-          },
           "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "*Specifika symptom/tecken (2)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "*Specifika symptom/tecken (3)",
+            "description" : "*Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose. (en)"
           }
         }
       },
@@ -1026,6 +1047,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.6",
           "members" : [ "ac0.3" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0023", "at0024", "at0027" ]
         }
       }
     },
