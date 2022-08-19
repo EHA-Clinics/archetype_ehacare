@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "7ccd9b0a6933bd872443310d8cc721e2",
+      "MD5-CAM-1.0.1" : "076e1dd10f6009f0eddd347685513325",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "10.0.0"
+      "sem_ver" : "11.0.0"
     },
     "details" : {
       "en" : {
@@ -810,7 +810,7 @@
                                   "terminologyId" : {
                                     "value" : "bloodType"
                                   },
-                                  "constraint" : [ "ac0.7" ],
+                                  "constraint" : [ "at0023", "at0024", "at0027" ],
                                   "selectedTerminologies" : [ "bloodType" ]
                                 } ]
                               } ],
