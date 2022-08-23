@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>13.1.0</value>
+                <value>14.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>110e6bc0378a528a1df37747df4adfce</value>
+                <value>e4f6676f8ac046e84638664452345e85</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -118,6 +118,19 @@
                         <includedValues>local_terms::57::Immunization</includedValues>
                     </constraint>
                 </Rule>
+            </Items>
+            <Items archetype_id="openEHR-EHR-CLUSTER.person.v1"
+                concept_name="Person" max="1" name="Nurse"
+                path="/data[at0001]/items[at0015]" xsi:type="tem:CLUSTER">
+                <Rule max="0" path="/items[at0011]"/>
+                <Rule max="0" path="/items[at0003]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/items[at0004]"/>
+                <Rule max="0" path="/items[at0010]"/>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.person.v1"
                 concept_name="Person" max="1" name="Attending Clinician"
