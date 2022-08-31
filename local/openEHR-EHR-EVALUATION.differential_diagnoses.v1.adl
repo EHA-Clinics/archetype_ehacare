@@ -59,7 +59,7 @@ Each differential diagnosis should be regarded as a temporary diagnostic hypothe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"70dcd835136f808d7f1e11b68314fce3">
+		["MD5-CAM-1.0.1"] = <"a55dc7201836db6aca54ed4717fc1cc7">
 		["build_uid"] = <"a2b9615e-9f6e-4e0a-9d31-44603dc05533">
 		["revision"] = <"1.0.0">
 	>
@@ -76,7 +76,7 @@ definition
 					}
 					CLUSTER[at0003] occurrences matches {0..*} matches {    -- Per differential
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0004] occurrences matches {1..*} matches {    -- Diagnosis name
+							ELEMENT[at0004] occurrences matches {0..*} matches {    -- Diagnosis name
 								value matches {
 									DV_TEXT matches {*}
 								}
