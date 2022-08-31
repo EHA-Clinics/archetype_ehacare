@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.0.0",
+      "sem_ver" : "9.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "8b273b57308709a809858c125996020e",
+      "MD5-CAM-1.0.1" : "e6da5ab591624fa4147e9393dbce12b7",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -571,7 +571,7 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.4",
+          "nodeId" : "at0.19",
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-differential_diagnoses-001.v1",
@@ -757,163 +757,6 @@
         "name" : "Vanessa Pereira",
         "organisation" : "Better - Pathfinder",
         "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "3a1268f5-fc52-461b-9022-b52202698502",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "6517C726A8DB05F5413A72470B87A283"
-      },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere én eller flere differensialdiagnoser som kan tenkes å passe med bestemte symptomer, kliniske undersøkelser og resultater av supplerende undersøkelser.",
-          "keywords" : [ "differensial", "diagnose", "hypotese", "alternativ", "diagnostisk" ],
-          "use" : "Brukes for å registrere én eller flere differensialdiagnoser som kan tenkes å passe med bestemte symptomer, kliniske undersøkelser og resultater av supplerende undersøkelser.\r\n\r\nDenne arketypen er utviklet for å sikre at alle differensialdiagnoser registreres ved hjelp av en enkelt modell. Når arketypen tas i brukt i et klinisk system vil hver enkelt differensialdiagnose registreres ved bruk av én forekomst av clusteret \"Differensialdiagnose\".\r\n\r\nHver differensialdiagnose bør betraktes som en midlertidig diagnostisk hypotese, og bør bare brukes i de tidligste fasene av diagnoseprosessen. I praksis kan klinikere identifisere en liste over en eller flere differensialdiagnoser, hvorav enhver kan forklare sykdomsbildet. Etterhvert som mer informasjon blir samlet inn fra ulike undersøkelser og prøver, blir listen over differensialdiagnoser gradvis endret eller redusert. Hvis en differensialdiagnose aksepteres som en sannsynlig diagnose, bør diagnosen registreres i journalen ved bruk av arketypen CLUSTER.problem_qualifier, nøstet i arketypen EVALUATION.problem_diagnosis, med \"Diagnostisk status\" satt til verdien \"Tentativ\" eller \"Arbeidsdiagnose\".",
-          "misuse" : "Brukes ikke til å registrere detaljert informasjon om et vedvarende problem eller formell diagnose - bruk arketypen EVALUATION.problem_diagnosis for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about one or more differential diagnoses that may be responsible for a single clinical presentation, examination findings and/or test results.",
-          "keywords" : [ "differential", "diagnosis", "hypothesis", "alternative", "diagnostic" ],
-          "use" : "To record details about one or more differential diagnoses that may be responsible for a single clinical presentation, examination findings and/or test results.\r\n\r\nThis archetype has been designed to ensure that all differential diagnoses are recorded using a single model. In a clinical system, it would be expected that each differential diagnosis would be recorded using a separate instance of the 'Per differential' cluster.\r\n\r\nEach differential diagnosis should be regarded as a temporary diagnostic hypothesis and should only be used in the earliest phases of the diagnostic process. In practice, clinicians may identify a list of one or more differential diagnoses, any one of which may explain the clinical presentation. As more information is gathered from the examination, diagnostic test results, or referrals, the list of differential diagnoses is gradually refined and outliers eliminated until one or more working, provisional, or preliminary diagnosis is determined. If a differential diagnosis is accepted as a likely diagnosis, it is anticipated that it will be formally entered into the health record as a Problem/Diagnosis using the EVALUATION.problem_diagnosis archetype. The CLUSTER.problem_qualifier archetype may be nested within the Problem/Diagnosis archetype to support annotation of the diagnosis as 'working' or 'preliminary'.",
-          "misuse" : "Not to be used to record detailed information about a persistent problem or formal diagnosis - use the EVALUATION.problem_diagnosis for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.differential_diagnoses.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-differential_diagnoses-001.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "EVALUATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0011.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0012.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0013",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0015.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "a2b9615e-9f6e-4e0a-9d31-44603dc05533",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Marit Alice Venheim, Vebjørn Arntzen",
-        "organisation" : "Helse Vest IKT, Oslo University Hospital",
-        "email" : "marit.alice.venheim@helse-vest-ikt.no, varntzen@ous-hf.no"
       },
       "otherDetails" : { }
     } ]
@@ -1815,6 +1658,72 @@
         "organisation" : "CaboLabs"
       },
       "accreditation" : "Computer Engineer",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "2d234b1b-f2a2-4546-b15b-7c48bda438fa",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "70dcd835136f808d7f1e11b68314fce3"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.differential_diagnoses.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-differential_diagnoses-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "a2b9615e-9f6e-4e0a-9d31-44603dc05533",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Marit Alice Venheim, Vebjørn Arntzen",
+        "organisation" : "Helse Vest IKT, Oslo University Hospital",
+        "email" : "marit.alice.venheim@helse-vest-ikt.no, varntzen@ous-hf.no"
+      },
       "otherDetails" : { }
     } ]
   } ],
