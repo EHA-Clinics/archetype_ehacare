@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "13.0.0",
+      "sem_ver" : "13.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f1808d81785014a67f418fde6ca3c4d8",
+      "MD5-CAM-1.0.1" : "0699366e148b4afc57a5cfa61a4e9bfc",
       "PARENT:MD5-CAM-1.0.1" : "B8AD0C7EB492491CE6F7968C1AFFB40C"
     },
     "details" : {
@@ -739,7 +739,84 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "F1B417CBAE0A0D6B70856C5909865044"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen zu einer Person, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Anbieter, Dienstleister, Betreuer, Personal, medizinisches Fachpersonal, Verwandter, Angehöriger, Hausarzt, Zeuge, Freund, Nachbar, Kind, Familie, Geschwister, Elternteil, Einzelperson" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Person darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\r\nBeispiele beinhalten:\r\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive;\r\n- die Rolle und Kontaktdaten eines benannten Ansprechpartners in einer Organisation, unter Verwendung des SLOT „Kontaktperson“ innerhalb des Archetyps CLUSTER.organisation;\r\n- Angaben zu einem Verwandten in einer Familienanamnese unter Verwendung des SLOT „Angaben zum Familienmitglied“ innerhalb des Archetyps openEHR-EHR-EVALUATION.family_history;\r\n- der Name der Person, die eine Laborprobe von einem Patienten entnommen hat, unter Verwendung der „Angaben zum Probennehmer“ innerhalb des Archetyps CLUSTER.specimen oder\r\n- ein Zeuge eines Sturzes oder Unfalls, unter Verwendung des SLOT \"Zeuge\" innerhalb des Archetyps CLUSTER.health_event.\r\n\r\nIn den meisten einfachen Anwendungsfällen reicht das unstrukturierte Element „Name“ innerhalb des Archetyps CLUSTER.person aus, um den Namen einer Person als Teil einer Gesundheitsakte darzustellen. In Fällen, in denen ein strukturierter Name für klinische Aufzeichnungszwecke erforderlich oder wünschenswert ist, verschachteln Sie diesen Archetyp jedoch im SLOT „Name strukturiert“ im Archetyp CLUSTER.person. Wenn der Archetyp CLUSTER.structured_name in den SLOT „Name strukturiert“ eingebettet ist, können beliebige oder alle Datenelemente als Textzeichenfolge kombiniert und im Element „Name“ dargestellt werden, solange sie konsistent sind.\r\n\r\nDieser Archetyp könnte auch stellvertretend für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise eine Bewertung, bei der Prüfer erwarten würden, dass die Details einer Person oben im Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.\r\n\r\nDarf nicht verwendet werden, um den Patienten, die Teilnehmer oder den Verfasser der Akte und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Referenzmodellattribute dargestellt werden sollten.\r\n\r\nDarf nicht verwendet werden, um das Geburtsdatum einer Person darzustellen – verwenden Sie zu diesem Zweck das Datenelement „Geburtsdatum“ im Archetyp EVALUATION.birth_summary.\r\n\r\nDarf nicht verwendet werden, um biometrische Details oder Biomarker über eine Person darzustellen – verwenden Sie zu diesem Zweck einen speziellen ENTRY-Archetyp.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Används för att registrera information om en person som behöver representeras i patientjournalen.",
+          "keywords" : [ "Leverantör, vårdare, vårdgivare, personal, vårdpersonal, släkting, anhöriga, läkare, vittne, vän, granne, barn, familj, syskon, förälder, individ" ],
+          "use" : "Används för att registrera uppgifter om en person i den elektroniska journalen, när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. Exempelvis:\r\n- Namn och kontaktuppgifter för en person som innehar en fysisk kopia av ett dokument om framtida behandlingsval eller behandlingsreservationer; exempelvis 'Copyholder'-attributet i arketypen EVALUATION.advance_care_directive;\r\n- Namn och kontaktuppgifter för en vårdgivare i en remiss;\r\n- Namn, roll och kontaktuppgifter för en medlem av ett vårdgivarteam;\r\n- Rollen och kontaktuppgifterna för en namngiven kontaktperson inom en organisation;\r\n- uppgifter om en släkting i en släkthistoria; eller\r\n- ett vittne till ett epileptisk anfall.\r\n\r\nI de flesta vanliga användningsfallen där ett namn måste inkluderas i en journal räcker det med fritextinmatning inom elementet 'Ostrukturerat namn'. I situationer när det krävs mer detaljerade detaljer om en eller flera namnkomponenter, använd de ytterligare strukturerade dataelementen i arketypen CLUSTER.structured_name. I denna arketyp finns en SLOT kapslade i \"Structured name\" . Om arketypen CLUSTER.structured name är kapslad i 'Structured name' SLOT, kan något eller alla av de strukturerade namnelementen sammanfogas och representeras i elementet 'Ostrukturerat namn'.\r\n\r\nDenna arketyp kan också användas som en proxy för formella demografiska data när man granskar en mall med domänexperter – till exempel en bedömning där granskare förväntar sig att se patientens uppgifter högst upp i bedömningsformuläret.",
+          "misuse" : "Får inte användas för att representera eller ersätta formell identifieringshantering eller i syfte att upprätthålla ett officiellt demografiskt register eller index. Använd ett formellt Master Patient Index eller Vårdgivare Index för detta ändamål, eller arketyper baserade på openEHR Demographic Information Model.\r\n\r\nFår inte användas för att representera patienten, deltagare eller författare till journalen och liknande dataelement som bör representeras formellt i journalen med hjälp av Referensmodellens attribut.\r\n\r\nFår inte användas för att registrera en individs födelsedatum - använd istället dataelementet \"Födelsedatum\" i EVALUATION.birth_summary för detta ändamål\r\n\r\nFår inte användas för att registrera biometriska detaljer eller biomarkörer om en individ - använd en specifik ENTRY-arketyp för detta ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en person i en pasientjournal.",
+          "keywords" : [ "tjenesteyter, omsorgsperson, helsepersonell, slektning, pårørende, vitne, venn, nabo, barn, familie, søsken, forelder, arbeidsgiver, rekvirent, henviser, ektefelle, verge, samboer, kjæreste" ],
+          "use" : "Brukes for å registrere detaljer om en person i en pasientjournal, når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\r\n\r\nFor eksempel:\r\n- navn og kontaktdetaljer til en person som har en kopi av et fremtidig behandlingsvalg, i SLOTet \"Kopiholder\" i arketypen EVALUATION.advance_care_directive (Fremtidig behandlingsvalg).\r\n- navn og kontaktdetaljer til en omsorgsperson eller helsepersonell i en organisasjon, i SLOTet \"Kontaktperson\" i arketypen CLUSTER.organisation (Organisasjon).\r\n- detaljer om en slektning i en familieanamnese, I SLOTet \"Detaljer om familiemedlem\" i arketypen EVALUATION.family_history (Familieanamnese).\r\n- navnet på en person som gjennomførte prøvetakning på en pasient, i SLOTet \"Detaljer om prøvetaker\" i arketypen CLUSTER.specimen (Prøvemateriale).\r\n- et vitne til et fall eller en ulykke, i SLOTet \"Witness\" i arketypen CLUSTER.health_event.\r\n\r\nI de mest vanlige brukscasene der navn skal registreres i pasientjournalen, vil dataelementet \"Navn\" i denne arketypen være tilstrekkelig. I tilfeller der det er nødvendig eller ønskelig med detaljer om en eller flere navnekomponenter, bruk arketypen CLUSTER.structured_name i SLOTet \"Strukturert navn\" i denne arketypen. \r\nOm det er gjort, kan noen eller alle de strukturerte navnelementene slås sammen av programvaren man benytter, og lagres i dataelementet \"Navn\".\r\n\r\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en person på toppen av vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\r\nBrukes ikke for å representere pasient, deltakere eller forfatter av skjema eller lignende, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.\r\n\r\nBrukes ikke for å registrere fødselsdato for individet - bruk dataelementet \"Fødselsdato\" i arketypen EVALUATION.birth_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om biometri eller biomarkører for personen - bruk en spesifikk ENTRY-arketype for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a person as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual" ],
+          "use" : "Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form.",
+          "misuse" : "Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh"
+          },
+          "purpose" : "*To record details about a person as they are known or understood in the course of clinical documentation. (en)",
+          "keywords" : [ "*provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual (en)" ],
+          "use" : "*Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form. (en)",
+          "misuse" : "*Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.person.v1",
     "differential" : true,
@@ -933,7 +1010,53 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "631B12227B6F857367CA40D256DD814A"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen über eine bestimmte Art der elektronischen Kommunikation, wie sie bekannt ist oder im Rahmen der klinischen Dokumentation verstanden wird.",
+          "keywords" : [ "Telefon, Mobiltelefon, E-Mail, Fax, Pager, Chat, Soziale Medien, asynchron, Kommunikation, SoMe" ],
+          "use" : "Zur Darstellung von Informationen über eine bestimmte Art der elektronischen Kommunikation für eine Person oder Organisation, wie sie bekannt ist oder im Rahmen der klinischen Dokumentation verstanden wird. Dies geschieht üblicherweise ad hoc oder wenn es nicht angemessen oder möglich ist, ein formelles Register oder einen Index zu verwenden.",
+          "misuse" : "Nicht für komplexe Kommunikationsdarstellung oder -verwaltung zu verwenden, wie z. B. bevorzugte Telefonnummern oder Gültigkeit der Nutzung. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.\r\n\r\nDarf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem openEHR Demographic Information Model basieren.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en spesifikk type elektronisk kommunikasjon som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.",
+          "keywords" : [ "telefon, mobil, e-post, faks, personsøker, chat, asynkron dialog, sosiale media, kommunikasjon, SoMe," ],
+          "use" : "Brukes for å registrere detaljer om en spesifikk type elektronisk kommunikasjon for en person eller en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet. Brukes ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.",
+          "misuse" : "Brukes ikke til kompleks kommunikasjonsadministrasjon, for eksempel foretrukne telefonnummer eller gyldige bruksdatoer. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\t\r\nBrukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a specified type of electronic communication as it is known or understood in the course of clinical documentation.",
+          "keywords" : [ "telephone, phone, mobile, email, fax, pager, chat, social media, asynchronous, communication, SoMe" ],
+          "use" : "Use to record details about a specified type of electronic communication for an individual or an organisation as it is known or understood in the course of clinical documentation. This is commonly ad hoc or when it is not appropriate or possible to use a formal register or index.",
+          "misuse" : "Not to be used for complex communication representation or management, such as preferred phone numbers or valid dates of usage. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.electronic_communication.v1",
     "differential" : true,
@@ -1175,7 +1298,53 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "631B12227B6F857367CA40D256DD814A"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen über eine bestimmte Art der elektronischen Kommunikation, wie sie bekannt ist oder im Rahmen der klinischen Dokumentation verstanden wird.",
+          "keywords" : [ "Telefon, Mobiltelefon, E-Mail, Fax, Pager, Chat, Soziale Medien, asynchron, Kommunikation, SoMe" ],
+          "use" : "Zur Darstellung von Informationen über eine bestimmte Art der elektronischen Kommunikation für eine Person oder Organisation, wie sie bekannt ist oder im Rahmen der klinischen Dokumentation verstanden wird. Dies geschieht üblicherweise ad hoc oder wenn es nicht angemessen oder möglich ist, ein formelles Register oder einen Index zu verwenden.",
+          "misuse" : "Nicht für komplexe Kommunikationsdarstellung oder -verwaltung zu verwenden, wie z. B. bevorzugte Telefonnummern oder Gültigkeit der Nutzung. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.\r\n\r\nDarf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem openEHR Demographic Information Model basieren.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en spesifikk type elektronisk kommunikasjon som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.",
+          "keywords" : [ "telefon, mobil, e-post, faks, personsøker, chat, asynkron dialog, sosiale media, kommunikasjon, SoMe," ],
+          "use" : "Brukes for å registrere detaljer om en spesifikk type elektronisk kommunikasjon for en person eller en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet. Brukes ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.",
+          "misuse" : "Brukes ikke til kompleks kommunikasjonsadministrasjon, for eksempel foretrukne telefonnummer eller gyldige bruksdatoer. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\t\r\nBrukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a specified type of electronic communication as it is known or understood in the course of clinical documentation.",
+          "keywords" : [ "telephone, phone, mobile, email, fax, pager, chat, social media, asynchronous, communication, SoMe" ],
+          "use" : "Use to record details about a specified type of electronic communication for an individual or an organisation as it is known or understood in the course of clinical documentation. This is commonly ad hoc or when it is not appropriate or possible to use a formal register or index.",
+          "misuse" : "Not to be used for complex communication representation or management, such as preferred phone numbers or valid dates of usage. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.electronic_communication.v1",
     "differential" : true,
@@ -1444,7 +1613,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "F3CC0032E8B4B09C7B535211E3DFAE66"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.",
+          "keywords" : [ "Bild", "Audio", "Text", "Video", "Anwendung", "Datei", "Multimedia", "DICOM", "digital", "Dokument", "Foto", "Sprachaufnahme" ],
+          "use" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.\r\n\r\nDie Absicht dieses Archetyps besteht nur darin, die Mediendatei und die Metadaten, die ihre Erfassung beschreiben, darzustellen. Dieser Archetyp wird in einen anderen Archetyp verschachtelt, normalerweise ein OBSERVATION- oder ACTION-Archetyp, der den Kontext und die Umstände im Zusammenhang mit der Erfassung der Mediendatei enthält. Zum Beispiel werden Details zu Modalität, Ansicht oder Aspekt eines Röntgenbildes und DICOM-Details im Archetyp OBSERVATION.imaging_exam_result dargestellt.\r\n\r\nDie Beispiele umfassen, sind aber nicht beschränkt auf:\r\n- Ein Foto einer Verletzung;\r\n- Ein Diagramm der Lokalisation eines bestimmten klinischen Befundes;\r\n- Ein digitales Ergebnis der Röntgen- oder CT-Aufnahme;\r\n- Eine Audio- oder Videoaufzeichnung eines Interviews;\r\n- Gescannte pathologische Schnitte;\r\n- Datenausgabe von einem klinischen Gerät, wie z.B. einem EKG-Gerät; oder\r\n- Ein gescanntes Bild von handgeschriebenen klinischen Notizen.\r\n\r\nDas Datenelement „Inhalt“ ermöglicht mithilfe des Multimedia-Datentyps die Erfassung und Speicherung der Mediendatei in der Gesundheitsakte. Der Multimedia-Datentyp hat viele RM-Attribute wie die Dateigröße und URI zu einer externen Quelle. Siehe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nWenn mehr als eine Mediendatei erfasst wurde, z. B. „Vorher“- und „Nachher“-Bilder einer Wunde, verwenden Sie eine Instanz dieses Archetyps, um jede Mediendatei darzustellen.\r\n\r\nWenn eine Reihe von Mediendateien als einzelnes Element dargestellt wird, z. B. ein CT-Scan, kann eine Instanz dieses Archetyps verwendet werden, um einen URI-Pfad zu der Gruppe darzustellen.\r\n\r\n\r\n\r\n",
+          "misuse" : "Nicht zur Darstellung von Informationen, Lehr- oder Schulungsmaterial verwenden, die außerhalb des Gesundheitsprozesses generiert werden, z. B. Broschüren zur Patientenaufklärung, die dem Patienten oder der Pflegeperson zur Verfügung gestellt werden. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.information_resource.\r\n\r\nNicht zur Darstellung von Referenz auf eine externe digitale Ressource, die als Quelle für maßgebliche Informationen oder Experteninformationen verwendet wird. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.knowledge_base_reference.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "*To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata. (en)",
+          "keywords" : [ "*image (en)", "*audio (en)", "*text (en)", "*video (en)", "*application (en)", "*file (en)", "*multimedia (en)", "*audio (en)", "*DICOM (en)", "*digital (en)", "*document (en)", "*photo (en)", "*voice (en)" ],
+          "use" : "*Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group. (en)",
+          "misuse" : "*Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.",
+          "keywords" : [ "bilde", "foto", "audio", "tekstfil", "video", "applikasjon", "fil", "multimedia", "DICOM", "digital", "dokument", "skannet", "scannet", "lyd" ],
+          "use" : "Brukes for å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.\r\n\r\nHensikten med denne arketypen er kun å være en bærer for mediafilen og metadataene som beskriver innholdet i filen. Denne arketypen vil være nøstet i en annen arketype, vanligvis en OBSERVATION eller ACTION arketype, som vil inneholde konteksten og omstendighetene knyttet til hvordan innholdet ble dannet. For eksempel blir detaljer om modalitet, visning eller aspekt av et radiologisk bilde og DICOM-detaljer dokumentert i arketypen OBSERVATION.imaging_exam_result.\r\n\r\nEksempler inkluderer, men er ikke begrenset til:\r\n- Et bilde av en skade;\r\n- Et diagram over plasseringen av et spesifikt klinisk funn;\r\n- Et digital radiologisk bilde;\r\n- Et lyd- eller videoopptak av et intervju;\r\n- Et skannet objektglass til mikroskopisk diagnostikk;\r\n- Data fra medisinsk utstyr, for eksempel en EKG-apparat;\r\n- Et skannet bilde av papirdokumentasjon eller håndskrevne kliniske notater.\r\n\r\nDataelementet \"Innhold\" gjør det mulig å fange og lagre mediafiler i den elektroniske pasientjournalen (EPJ) ved hjelp av multimedia-datatypen. Multimedia-datatypen har mange RM-attributter, for eksempel filstørrelsen og URI til en ekstern kilde. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nHvis mer enn én mediafil skal dokumenteres, for eksempel bilder før og etter behandling av et sår, bruk en forekomst av denne arketypen for hvert bilde.\r\n\r\nHvis en serie mediafiler er representert som et enkelt element, for eksempel en CT-skanning, kan en forekomst av denne arketypen brukes til å representere en URI til gruppen/serien.",
+          "misuse" : "Skal ikke brukes til å representere informasjon, instruksjons- eller utdanningsmateriale levert til en person, eller dens omsorgsperson, for eksempel brosjyrer for pasientopplæring. Bruk CLUSTER.information_resource til dette formålet.\r\n\r\nSkal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUSTER. Knowledge_base_reference for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.",
+          "keywords" : [ "image", "audio", "text", "video", "application", "file", "multimedia", "audio", "DICOM", "digital", "document", "photo", "voice" ],
+          "use" : "Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group.",
+          "misuse" : "Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
     "differential" : true,
@@ -1624,7 +1855,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "5DFD0809E7CD46EA0712A590C68F545B"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen zur einer Organisation, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Organisation, Anbieter, Versorger, Betreuer, Netzwerk, Verbund, Gruppe" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Organisation darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\r\nBeispiele beinhalten:\r\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive oder\r\n- Name und Kontaktdaten einer Organisation, die die Betreuung einer Person in ihrem zu Hause übernimmt.\r\n\r\nDieser Archetyp wurde entwickelt, um Angaben zu offiziell anerkannten Einrichtungen, wie einem eingetragenen Unternehmen, einem Krankenhaus und seinen anerkannten „Unterorganisationen“, wie einer operativ getrennten oder spezialisierten Satellitenklinik oder einem häuslichen Pflegedienst, zu enthalten. Es kann auch verwendet werden, um Kontaktinformationen über informellere Netzwerke oder Gruppen darzustellen, wie z. B. eine lokale Selbsthilfegruppe.\r\n\r\nDieser Archetyp könnte auch als Proxy für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise bei einer Bewertung, bei der die Prüfer erwarten würden, dass die Details zu der Organisation oben auf dem Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um ein offizielles Register oder einen Index darzustellen, zu ersetzen oder zu führen. Verwenden Sie zu diesem Zweck einen formellen Gesundheitsanbieter-Index (Health Provider Index) oder Archetypen, die auf dem openEHR Demographic Information Model basieren.\r\n\r\nDer Archetyp darf nicht verwendet werden, um den Pflegeort und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Reference Model-Attribute dargestellt werden sollten.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en organisation på det sätt som det behöver representeras i en journalanteckning.\r\n",
+          "keywords" : [ "organisation, leverantör, vårdgivare, vårdenhet, enhet, avdelning, nätverk, grupp" ],
+          "use" : "Används för att registrera information om en organisation som behöver representeras i journalen. Används exempelvis ad hoc eller i de fall då formella demografiska register eller kataloger inte kan användas istället. \r\nExempel inkluderar:\r\n- namn och kontaktuppgifter för en organisation som har en fysisk kopia av patientens önskemål om vård i händelse av att patienten inte längre kan kommunicera\r\n- namn och kontaktuppgifter för hemtjänst- eller hemsjukvårdsorganisation för en individ\r\n\r\nDenna arketyp har utformats för att dokumentera information om formellt erkända enheter, såsom ett registrerat företag, ett sjukhus och dess erkända \"underorganisationer\", såsom en separat eller specialiserad satellitklinik eller hemsjukvård. Den kan också användas för att dokumentera kontaktinformation om mer informella nätverk eller grupper, till exempel en lokal stödgrupp.\r\n\r\nDen här arketypen kan också användas som en proxy för formell demografisk data när man granskar en mall med domänexperter - exempelvis där granskare förväntar sig att se en organisations information i ett formulär.",
+          "misuse" : "*Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.",
+          "keywords" : [ "organisasjon, leverandør, omsorgsperson, nettverk, gruppe" ],
+          "use" : "Brukes for å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet, ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\r\n\r\nFor eksempel:\r\n- kopiinnhaver av av et fremtidig behandlingsvalg ved å bruke \"Kopiholder\"-SLOTet i arketypen \"EVALUATION.advance_care_directive\" (Fremtidig behandlingsvalg).\r\n- navn og kontaktdetaljer for en organisasjon som yter hjemmehjelp til en enkeltperson.\r\n\r\nDenne arketypen er utformet for å registrere detaljer om formelt anerkjente enheter, for eksempel en registrert virksomhet, et sykehus og dets \"underorganisasjoner\", en operativt separat eller spesialisert satellittklinikk eller hjemmetjeneste. Den kan også brukes til å registrere kontaktinformasjon om mer uformelle nettverk eller grupper, for eksempel en lokal støttegruppe.\r\n\r\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en organisasjon i et vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere, erstatte eller vedlikeholde formelle demografiske opplysninger. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\r\nBrukes ikke for å representere behandlingssted eller lignende dataelementer, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about an organisation as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "organisation, organization, provider, carer, network, group" ],
+          "use" : "Use to record details of an organisation as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype; or\r\n- the name and contact details of an organisation providing home care to an individual.\r\n\r\nThis archetype has been designed to carry details of formally recognised entities, such as a registered business, a hospital and its recognised 'sub-organisations', such as an operationally separate or specialised satellite clinic or home care service. It may also be used to carry contact information about more informal networks or groups, such as a local community support group.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see an organisations' details on an assessment form.",
+          "misuse" : "Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation.v1",
     "differential" : true,
@@ -1792,7 +2085,84 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "F1B417CBAE0A0D6B70856C5909865044"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen zu einer Person, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Anbieter, Dienstleister, Betreuer, Personal, medizinisches Fachpersonal, Verwandter, Angehöriger, Hausarzt, Zeuge, Freund, Nachbar, Kind, Familie, Geschwister, Elternteil, Einzelperson" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Person darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\r\nBeispiele beinhalten:\r\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive;\r\n- die Rolle und Kontaktdaten eines benannten Ansprechpartners in einer Organisation, unter Verwendung des SLOT „Kontaktperson“ innerhalb des Archetyps CLUSTER.organisation;\r\n- Angaben zu einem Verwandten in einer Familienanamnese unter Verwendung des SLOT „Angaben zum Familienmitglied“ innerhalb des Archetyps openEHR-EHR-EVALUATION.family_history;\r\n- der Name der Person, die eine Laborprobe von einem Patienten entnommen hat, unter Verwendung der „Angaben zum Probennehmer“ innerhalb des Archetyps CLUSTER.specimen oder\r\n- ein Zeuge eines Sturzes oder Unfalls, unter Verwendung des SLOT \"Zeuge\" innerhalb des Archetyps CLUSTER.health_event.\r\n\r\nIn den meisten einfachen Anwendungsfällen reicht das unstrukturierte Element „Name“ innerhalb des Archetyps CLUSTER.person aus, um den Namen einer Person als Teil einer Gesundheitsakte darzustellen. In Fällen, in denen ein strukturierter Name für klinische Aufzeichnungszwecke erforderlich oder wünschenswert ist, verschachteln Sie diesen Archetyp jedoch im SLOT „Name strukturiert“ im Archetyp CLUSTER.person. Wenn der Archetyp CLUSTER.structured_name in den SLOT „Name strukturiert“ eingebettet ist, können beliebige oder alle Datenelemente als Textzeichenfolge kombiniert und im Element „Name“ dargestellt werden, solange sie konsistent sind.\r\n\r\nDieser Archetyp könnte auch stellvertretend für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise eine Bewertung, bei der Prüfer erwarten würden, dass die Details einer Person oben im Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.\r\n\r\nDarf nicht verwendet werden, um den Patienten, die Teilnehmer oder den Verfasser der Akte und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Referenzmodellattribute dargestellt werden sollten.\r\n\r\nDarf nicht verwendet werden, um das Geburtsdatum einer Person darzustellen – verwenden Sie zu diesem Zweck das Datenelement „Geburtsdatum“ im Archetyp EVALUATION.birth_summary.\r\n\r\nDarf nicht verwendet werden, um biometrische Details oder Biomarker über eine Person darzustellen – verwenden Sie zu diesem Zweck einen speziellen ENTRY-Archetyp.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Används för att registrera information om en person som behöver representeras i patientjournalen.",
+          "keywords" : [ "Leverantör, vårdare, vårdgivare, personal, vårdpersonal, släkting, anhöriga, läkare, vittne, vän, granne, barn, familj, syskon, förälder, individ" ],
+          "use" : "Används för att registrera uppgifter om en person i den elektroniska journalen, när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. Exempelvis:\r\n- Namn och kontaktuppgifter för en person som innehar en fysisk kopia av ett dokument om framtida behandlingsval eller behandlingsreservationer; exempelvis 'Copyholder'-attributet i arketypen EVALUATION.advance_care_directive;\r\n- Namn och kontaktuppgifter för en vårdgivare i en remiss;\r\n- Namn, roll och kontaktuppgifter för en medlem av ett vårdgivarteam;\r\n- Rollen och kontaktuppgifterna för en namngiven kontaktperson inom en organisation;\r\n- uppgifter om en släkting i en släkthistoria; eller\r\n- ett vittne till ett epileptisk anfall.\r\n\r\nI de flesta vanliga användningsfallen där ett namn måste inkluderas i en journal räcker det med fritextinmatning inom elementet 'Ostrukturerat namn'. I situationer när det krävs mer detaljerade detaljer om en eller flera namnkomponenter, använd de ytterligare strukturerade dataelementen i arketypen CLUSTER.structured_name. I denna arketyp finns en SLOT kapslade i \"Structured name\" . Om arketypen CLUSTER.structured name är kapslad i 'Structured name' SLOT, kan något eller alla av de strukturerade namnelementen sammanfogas och representeras i elementet 'Ostrukturerat namn'.\r\n\r\nDenna arketyp kan också användas som en proxy för formella demografiska data när man granskar en mall med domänexperter – till exempel en bedömning där granskare förväntar sig att se patientens uppgifter högst upp i bedömningsformuläret.",
+          "misuse" : "Får inte användas för att representera eller ersätta formell identifieringshantering eller i syfte att upprätthålla ett officiellt demografiskt register eller index. Använd ett formellt Master Patient Index eller Vårdgivare Index för detta ändamål, eller arketyper baserade på openEHR Demographic Information Model.\r\n\r\nFår inte användas för att representera patienten, deltagare eller författare till journalen och liknande dataelement som bör representeras formellt i journalen med hjälp av Referensmodellens attribut.\r\n\r\nFår inte användas för att registrera en individs födelsedatum - använd istället dataelementet \"Födelsedatum\" i EVALUATION.birth_summary för detta ändamål\r\n\r\nFår inte användas för att registrera biometriska detaljer eller biomarkörer om en individ - använd en specifik ENTRY-arketyp för detta ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en person i en pasientjournal.",
+          "keywords" : [ "tjenesteyter, omsorgsperson, helsepersonell, slektning, pårørende, vitne, venn, nabo, barn, familie, søsken, forelder, arbeidsgiver, rekvirent, henviser, ektefelle, verge, samboer, kjæreste" ],
+          "use" : "Brukes for å registrere detaljer om en person i en pasientjournal, når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\r\n\r\nFor eksempel:\r\n- navn og kontaktdetaljer til en person som har en kopi av et fremtidig behandlingsvalg, i SLOTet \"Kopiholder\" i arketypen EVALUATION.advance_care_directive (Fremtidig behandlingsvalg).\r\n- navn og kontaktdetaljer til en omsorgsperson eller helsepersonell i en organisasjon, i SLOTet \"Kontaktperson\" i arketypen CLUSTER.organisation (Organisasjon).\r\n- detaljer om en slektning i en familieanamnese, I SLOTet \"Detaljer om familiemedlem\" i arketypen EVALUATION.family_history (Familieanamnese).\r\n- navnet på en person som gjennomførte prøvetakning på en pasient, i SLOTet \"Detaljer om prøvetaker\" i arketypen CLUSTER.specimen (Prøvemateriale).\r\n- et vitne til et fall eller en ulykke, i SLOTet \"Witness\" i arketypen CLUSTER.health_event.\r\n\r\nI de mest vanlige brukscasene der navn skal registreres i pasientjournalen, vil dataelementet \"Navn\" i denne arketypen være tilstrekkelig. I tilfeller der det er nødvendig eller ønskelig med detaljer om en eller flere navnekomponenter, bruk arketypen CLUSTER.structured_name i SLOTet \"Strukturert navn\" i denne arketypen. \r\nOm det er gjort, kan noen eller alle de strukturerte navnelementene slås sammen av programvaren man benytter, og lagres i dataelementet \"Navn\".\r\n\r\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en person på toppen av vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\r\nBrukes ikke for å representere pasient, deltakere eller forfatter av skjema eller lignende, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.\r\n\r\nBrukes ikke for å registrere fødselsdato for individet - bruk dataelementet \"Fødselsdato\" i arketypen EVALUATION.birth_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om biometri eller biomarkører for personen - bruk en spesifikk ENTRY-arketype for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a person as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual" ],
+          "use" : "Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form.",
+          "misuse" : "Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh"
+          },
+          "purpose" : "*To record details about a person as they are known or understood in the course of clinical documentation. (en)",
+          "keywords" : [ "*provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual (en)" ],
+          "use" : "*Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form. (en)",
+          "misuse" : "*Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.person.v1",
     "differential" : true,
@@ -1885,7 +2255,7 @@
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
-            "text" : "Receiving clinician's name",
+            "text" : "Receiving clinician name",
             "description" : "The unstructured name for the individual.",
             "comment" : "The content of this data element may be derived from one or more components from CLUSTER.structured_name combined together as a text string. For example: 'John Markham', 'Professor Sir John Markham', 'John Markham Jnr MP'."
           }
@@ -1981,7 +2351,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "F3CC0032E8B4B09C7B535211E3DFAE66"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.",
+          "keywords" : [ "Bild", "Audio", "Text", "Video", "Anwendung", "Datei", "Multimedia", "DICOM", "digital", "Dokument", "Foto", "Sprachaufnahme" ],
+          "use" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.\r\n\r\nDie Absicht dieses Archetyps besteht nur darin, die Mediendatei und die Metadaten, die ihre Erfassung beschreiben, darzustellen. Dieser Archetyp wird in einen anderen Archetyp verschachtelt, normalerweise ein OBSERVATION- oder ACTION-Archetyp, der den Kontext und die Umstände im Zusammenhang mit der Erfassung der Mediendatei enthält. Zum Beispiel werden Details zu Modalität, Ansicht oder Aspekt eines Röntgenbildes und DICOM-Details im Archetyp OBSERVATION.imaging_exam_result dargestellt.\r\n\r\nDie Beispiele umfassen, sind aber nicht beschränkt auf:\r\n- Ein Foto einer Verletzung;\r\n- Ein Diagramm der Lokalisation eines bestimmten klinischen Befundes;\r\n- Ein digitales Ergebnis der Röntgen- oder CT-Aufnahme;\r\n- Eine Audio- oder Videoaufzeichnung eines Interviews;\r\n- Gescannte pathologische Schnitte;\r\n- Datenausgabe von einem klinischen Gerät, wie z.B. einem EKG-Gerät; oder\r\n- Ein gescanntes Bild von handgeschriebenen klinischen Notizen.\r\n\r\nDas Datenelement „Inhalt“ ermöglicht mithilfe des Multimedia-Datentyps die Erfassung und Speicherung der Mediendatei in der Gesundheitsakte. Der Multimedia-Datentyp hat viele RM-Attribute wie die Dateigröße und URI zu einer externen Quelle. Siehe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nWenn mehr als eine Mediendatei erfasst wurde, z. B. „Vorher“- und „Nachher“-Bilder einer Wunde, verwenden Sie eine Instanz dieses Archetyps, um jede Mediendatei darzustellen.\r\n\r\nWenn eine Reihe von Mediendateien als einzelnes Element dargestellt wird, z. B. ein CT-Scan, kann eine Instanz dieses Archetyps verwendet werden, um einen URI-Pfad zu der Gruppe darzustellen.\r\n\r\n\r\n\r\n",
+          "misuse" : "Nicht zur Darstellung von Informationen, Lehr- oder Schulungsmaterial verwenden, die außerhalb des Gesundheitsprozesses generiert werden, z. B. Broschüren zur Patientenaufklärung, die dem Patienten oder der Pflegeperson zur Verfügung gestellt werden. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.information_resource.\r\n\r\nNicht zur Darstellung von Referenz auf eine externe digitale Ressource, die als Quelle für maßgebliche Informationen oder Experteninformationen verwendet wird. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.knowledge_base_reference.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "*To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata. (en)",
+          "keywords" : [ "*image (en)", "*audio (en)", "*text (en)", "*video (en)", "*application (en)", "*file (en)", "*multimedia (en)", "*audio (en)", "*DICOM (en)", "*digital (en)", "*document (en)", "*photo (en)", "*voice (en)" ],
+          "use" : "*Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group. (en)",
+          "misuse" : "*Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.",
+          "keywords" : [ "bilde", "foto", "audio", "tekstfil", "video", "applikasjon", "fil", "multimedia", "DICOM", "digital", "dokument", "skannet", "scannet", "lyd" ],
+          "use" : "Brukes for å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.\r\n\r\nHensikten med denne arketypen er kun å være en bærer for mediafilen og metadataene som beskriver innholdet i filen. Denne arketypen vil være nøstet i en annen arketype, vanligvis en OBSERVATION eller ACTION arketype, som vil inneholde konteksten og omstendighetene knyttet til hvordan innholdet ble dannet. For eksempel blir detaljer om modalitet, visning eller aspekt av et radiologisk bilde og DICOM-detaljer dokumentert i arketypen OBSERVATION.imaging_exam_result.\r\n\r\nEksempler inkluderer, men er ikke begrenset til:\r\n- Et bilde av en skade;\r\n- Et diagram over plasseringen av et spesifikt klinisk funn;\r\n- Et digital radiologisk bilde;\r\n- Et lyd- eller videoopptak av et intervju;\r\n- Et skannet objektglass til mikroskopisk diagnostikk;\r\n- Data fra medisinsk utstyr, for eksempel en EKG-apparat;\r\n- Et skannet bilde av papirdokumentasjon eller håndskrevne kliniske notater.\r\n\r\nDataelementet \"Innhold\" gjør det mulig å fange og lagre mediafiler i den elektroniske pasientjournalen (EPJ) ved hjelp av multimedia-datatypen. Multimedia-datatypen har mange RM-attributter, for eksempel filstørrelsen og URI til en ekstern kilde. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nHvis mer enn én mediafil skal dokumenteres, for eksempel bilder før og etter behandling av et sår, bruk en forekomst av denne arketypen for hvert bilde.\r\n\r\nHvis en serie mediafiler er representert som et enkelt element, for eksempel en CT-skanning, kan en forekomst av denne arketypen brukes til å representere en URI til gruppen/serien.",
+          "misuse" : "Skal ikke brukes til å representere informasjon, instruksjons- eller utdanningsmateriale levert til en person, eller dens omsorgsperson, for eksempel brosjyrer for pasientopplæring. Bruk CLUSTER.information_resource til dette formålet.\r\n\r\nSkal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUSTER. Knowledge_base_reference for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.",
+          "keywords" : [ "image", "audio", "text", "video", "application", "file", "multimedia", "audio", "DICOM", "digital", "document", "photo", "voice" ],
+          "use" : "Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group.",
+          "misuse" : "Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
     "differential" : true,
@@ -2147,7 +2579,83 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "D9A0BF65B696B4A73E68E4F2A7D6C74F"
       },
-      "details" : { }
+      "details" : {
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "*To provide a framework and design guidance for consistent modelling of content within a template for a Medication list. (en)",
+          "keywords" : [ "лекарство", "медикамент", "препарат", "текущий", "список", "лист", "назначений", "отмена" ],
+          "use" : "*Use as a framework and suggested design guidance for consistent modelling of content within a template for an Medication list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.medication_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive use of medications can be recorded using multiple instances of the INSTRUCTION.medication_order; OR\r\n- statements about the positive exclusion of use of medications can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive use of medications nor a positive exclusion - can be recorded using the EVALUATION.absence archetype..\r\n\r\nStatements about the absence of medication orders, either general or specific, can only indicate the state of the subject at the time that the information was actually recorded - that is, they are event based. It is not sensible to persist the recording of a positive absence of a medication order as it may subsequently be ordered or self-administered by the patient, which may render any or all previous positive statements of absence obsolete. \r\n\r\nINSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. An alternative form of the  Medication list comprising only ACTIONs can be used represent only those medication that have been prescribed/printed by the recording clinician. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "*To provide a framework and design guidance for consistent modelling of content within a template for a Medication list. (en)",
+          "keywords" : [ "medicamento", "medicación", "exclusión", "ausencia", "actual", "list" ],
+          "use" : "*Use as a framework and suggested design guidance for consistent modelling of content within a template for an Medication list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.medication_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive use of medications can be recorded using multiple instances of the INSTRUCTION.medication_order; OR\r\n- statements about the positive exclusion of use of medications can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive use of medications nor a positive exclusion - can be recorded using the EVALUATION.absence archetype..\r\n\r\nStatements about the absence of medication orders, either general or specific, can only indicate the state of the subject at the time that the information was actually recorded - that is, they are event based. It is not sensible to persist the recording of a positive absence of a medication order as it may subsequently be ordered or self-administered by the patient, which may render any or all previous positive statements of absence obsolete. \r\n\r\nINSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. An alternative form of the  Medication list comprising only ACTIONs can be used represent only those medication that have been prescribed/printed by the recording clinician. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "*To provide a framework and design guidance for consistent modelling of content within a template for a Medication list. (en)",
+          "keywords" : [ "medicamento", "exclusão", "ausência", "atual", "lista" ],
+          "use" : "*Use as a framework and suggested design guidance for consistent modelling of content within a template for an Medication list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.medication_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive use of medications can be recorded using multiple instances of the INSTRUCTION.medication_order; OR\r\n- statements about the positive exclusion of use of medications can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive use of medications nor a positive exclusion - can be recorded using the EVALUATION.absence archetype..\r\n\r\nStatements about the absence of medication orders, either general or specific, can only indicate the state of the subject at the time that the information was actually recorded - that is, they are event based. It is not sensible to persist the recording of a positive absence of a medication order as it may subsequently be ordered or self-administered by the patient, which may render any or all previous positive statements of absence obsolete. \r\n\r\nINSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. An alternative form of the  Medication list comprising only ACTIONs can be used represent only those medication that have been prescribed/printed by the recording clinician. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a framework and design guidance for consistent modelling of content within a template for a Medication list.",
+          "keywords" : [ "medication", "exclusion", "absence", "current", "list" ],
+          "use" : "Use as a framework and suggested design guidance for consistent modelling of content within a template for an Medication list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.medication_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive use of medications can be recorded using multiple instances of the INSTRUCTION.medication_order; OR\r\n- statements about the positive exclusion of use of medications can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive use of medications nor a positive exclusion - can be recorded using the EVALUATION.absence archetype..\r\n\r\nStatements about the absence of medication orders, either general or specific, can only indicate the state of the subject at the time that the information was actually recorded - that is, they are event based. It is not sensible to persist the recording of a positive absence of a medication order as it may subsequently be ordered or self-administered by the patient, which may render any or all previous positive statements of absence obsolete. \r\n\r\nINSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. An alternative form of the  Medication list comprising only ACTIONs can be used represent only those medication that have been prescribed/printed by the recording clinician.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "*To provide a framework and design guidance for consistent modelling of content within a template for a Medication list. (en)",
+          "keywords" : [ "medicación", "exclusión", "orden", "prescripción", "lista" ],
+          "use" : "*Use as a framework and suggested design guidance for consistent modelling of content within a template for an Medication list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.medication_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive use of medications can be recorded using multiple instances of the INSTRUCTION.medication_order; OR\r\n- statements about the positive exclusion of use of medications can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive use of medications nor a positive exclusion - can be recorded using the EVALUATION.absence archetype..\r\n\r\nStatements about the absence of medication orders, either general or specific, can only indicate the state of the subject at the time that the information was actually recorded - that is, they are event based. It is not sensible to persist the recording of a positive absence of a medication order as it may subsequently be ordered or self-administered by the patient, which may render any or all previous positive statements of absence obsolete. \r\n\r\nINSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. An alternative form of the  Medication list comprising only ACTIONs can be used represent only those medication that have been prescribed/printed by the recording clinician. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.medication_list.v0",
     "differential" : true,
@@ -2282,7 +2790,99 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "E567F68BD0F0BE755DE0F5D504533ED1"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Repräsentation aller Aspekte einer Verordnung eines Arzneimittels, Impfstoffs, Ernährungsprodukts oder eines anderen therapeutischen Mittels für eine bestimmte Person.",
+          "keywords" : [ "Medikament", "Verordnung", "Rezept", "verschreiben", "verordnen", "Therapie", "Substanz", "Wirkstoff", "Arzneimittel", "therapeutisch", "OTC", "rezeptfrei", "therapeutisches Mittel", "Pharmazeutikum", "Produkt", "Posologie", "Dosierung", "Behandlung", "Flüssigkeit", "Ernährung", "Arzneimittelverordnung", "CPOE" ],
+          "use" : "Verwende diesen Archetypen, um alle Aspekte einer Verordnung eines Arzneimittels, Impfstoffs, Ernährungsprodukts oder medizinischen Bedarfs für eine bestimmte Person darzustellen.\r\n\r\nDer Archetyp ist für jede Arzneimittelart und die damit verbundene Verordnung bestimmt, unabhängig davon, ob sie von einem medizinischen Fachpersonal verschrieben wird oder, ob sie \"rezeptfrei\" erhältlich ist. Der Anwendungsbereich dieses Medikamenten-Archetyps umfasst auch Verordnungen von Impfungen, parenteralen Flüssigkeiten oder anderen therapeutischen Mitteln, wie Verbände, Ernährungsprodukte oder andere Erzeugnisse, die angewendet oder verabreicht werden, um eine therapeutische Wirkung zu erzielen, sowie ein gemeinsames Muster für die Datenerfassung haben.\r\n\r\nDer Archetyp ist für die Verwendung in einer Reihe von klinischen Kontexten konzipiert, einschließlich, aber nicht beschränkt auf:\r\n- eine Aufzeichnung in einer klinischen Beratung (COMPOSITION.encounter);\r\n- ein schriftliches Rezept eines Arztes, Zahnarztes, Krankenpflegers oder einer anders bezeichneten medizinischen Fachkraft für ein Arzneimittel oder ein Ernährungsprodukt, das ausgegeben und verabreicht werden soll (innerhalb eines COMPOSITION.prescription);\r\n- ein Element in einer aktuellen Medikamentenliste, einem Rezept oder einer Medikamentenübersicht (innerhalb der COMPOSITION.medication_list); und\r\n- ein Element in einem zusammenfassenden Dokuments, wie z.B. die Übertragung von Pflegeleistungen (COMPOSITION.transfer_summary) oder eine Überweisung (COMPOSITION.request).\r\n\r\nEine Medikamentenverordnung ist in meisten Fällen einfach - normalerweise für ein einzelnes Arzneimittel mit unkomplizierten Anweisungen für die Abgabe und Verabreichung. Dieser Archetyp soll jedoch auch komplexere therapeutische Verordnungen ermöglichen. Zum Beispiel:\r\n\r\n- eine reduzierte Dosis von Prednisolon über einen Zeitraum von Wochen;\r\n- Insulintitration mit Dosierung abhängig von Testergebnissen;\r\n- mehrere Medikamente, die gleichzeitig im Rahmen eines einzelnen Medikamentenplans verschrieben werden, wie beispielsweise eine Dreifachtherapie bei Magengeschwür;\r\n- intravenöse Verabreichung von Medikamenten oder Nahrungsergänzungsmitteln, einschließlich parenteraler Ernährung.\r\n\r\nDer Archetyp wurde daher so entworfen, um eine Reihe von Komplexitäten zuzulassen: \r\n- einfache Anweisungen bei Rezepten wie \"Furosemid 40 mg zwei Tabletten morgens und eine zum Mittagessen\", um die Kompatibilität mit bestehenden Systemen zu gewährleisten;\r\n- die Menge des Arzneimittels wird normalerweise in Form einer Anzahl und einer entsprechenden Dosiseinheit dargestellt. Alternativ kann jedoch auch ein Statement getroffen werden, um die Kompatibilität mit vorhandenen Systemen und die Abdeckung aller klinischen Szenarien sicherzustellen.\r\n- strukturierte Details für Dosis, Verabreichungsweg und Zeitpunkt, um eine vollständig berechenbare Spezifikation darzustellen.\r\n\r\nEs wurde auch so konzipiert, dass eine einzige Darstellung der Medikamentenverordnung folgendes darstellen kann:\r\n- komplexe aufeinanderfolgende Medikamentenverordnungen mit derselben Arzneimittelstärke werden innerhalb einer einzigen Verordnungsstruktur unterstützt;\r\n- mehrere Medikamentenverordnungen können verkettet werden, wenn verschiedene Medikamente oder Arzneizubereitungen nacheinander verabreicht werden müssen.\r\n\r\nDieser Archetyp eignet sich auch für die Verordnung von parenteralen Flüssigkeiten in Pflegeeinrichtungen, in denen es üblich ist, solche \"verordnungsfähige\" Stoffe herzustellen. In anderer Umgebung kann eine separate \"Verordnung parenteraler Flüssigkeit\" angebracht sein.\r\n\r\nSLOTs mit CLUSTER-Archetypen wurden aus drei Gründen verwendet, um einen Teil des Inhalts darzustellen:\r\n- um einen zentralen Archetyp zu erhalten, der für alle oben genannten Anwendungsfälle verwendet werden kann und dennoch Flexibilität bietet, wo es erforderlich ist, z.B. der SLOT „Arzneimitteldetails“', wo zusätzliche strukturierte Details hinzugefügt werden können. Ein Kandidat-Archetyp wird für Arzneimittel vorgeschlagen. Es ist möglich, dass in Zukunft andere CLUSTER-Archetypen für andere Zwecke, wie z.B. komplexe Verordnungen von parenteraler Ernährung, benötigt werden;\r\n- Unterstützung der Wiederverwendung von Archetypen in Situationen, in denen der Inhalt auch in anderen klinischen Kontexten verwendet wird, hauptsächlich im zugehörigen Archetyp ACTION.medication, um tatsächliche Abgabe, Verabreichung usw. darzustellen; und\r\n- um weniger genutzten Inhalt aus dem zentralen Archetyp-Framework zu entfernen.\r\n\r\nMehrfache Verordnungen können als separate Aktivitäten innerhalb dieser einzigen Archetypen-Instanz dargestellt werden, um eng gebundene Verordnungen verschiedener Medikamente zu tragen, z.B. H. pylori-Therapie, wenn diese nicht als einzelne Packung verschrieben wird.\r\n\r\nBeachten Sie, dass diese Verwendungen sowohl die Anwendungsfälle der FHIR-Profile „Medikation Order“ als auch „Medikation Statement“ zusammenfassen. D.h. dieser Archetyp ist eine Übereinstimmung für beide FHIR-Ressourcen, die im entsprechenden Kontext verwendet werden.",
+          "misuse" : "Nicht zur Repräsentation der Aktivitäten im Zusammenhang mit der Ausführung der Verordnung von Medikamenten, Impfstoffen, Nahrungsmitteln oder therapeutischen Mitteln verwenden, z. B. Angaben zur tatsächlichen Verabreichung oder Abgabe. Verwenden Sie dafür den Archetyp ACTION.medication.\r\n\r\nNicht zur Repräsentation der Verordnung von Blutprodukten verwenden, da dies einen grundlegend anderen klinischen Prozess beinhaltet und wahrscheinlich andere unterstützende Informationen erfordert. Verwenden Sie dafür den Archetyp INSTRUCTION.transfusion.\r\n\r\nNicht zur Repräsentation der Verordnung zum Einsetzen von Implantaten oder medizinischen Geräten wie Herzschrittmachern und Defibrillatoren verwenden. Verwenden Sie dafür den Archetyp INSTRUCTION.procedure",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera samtliga aspekter av en beställning av ett läkemedel, vaccin, näringspreparat eller annat terapeutiskt produkt för en identifierad individ.",
+          "keywords" : [ "medicinering", "order", "beställning", "ordinera", "terapi", "substans", "läkemedel", "terapeutisk", "farmaceutisk", "produkt", "dosering", "behandling", "vätska", "näring", "medicin" ],
+          "use" : "Används för att registrera samtliga aspekter av en beställning av ett läkemedel, vaccin, näringspreparat eller annan terapeutisk produkt för en identifierad individ.\r\n\r\nDen här arketypen är avsedd att användas för alla typer av läkemedel och relaterade ordrar, oavsett om de ordinerats av vårdpersonal eller är tillgängligt för köp \"över disk\". Omfattningen av denna arketyp inkluderar även beställning av vaccin, parenterala vätskor och andra terapeutiska produkter, såsom bandage, näringspreparat eller andra föremål som appliceras eller administreras för att uppnå en terapeutisk effekt. \r\n\r\nDenna arketyp är utformad för att användas vid ett flertal kliniska sammanhang, bland annat: \r\n- dokumentation i ett kliniskt samråd (COMPOSITION.encounter);\r\n- skriftlig ordination av en läkare, tandläkare, sjuksköterska eller annan utsedd hälso- och sjukvårdspersonal för ett läkemedel eller ett näringsperparat som ska dispenseras och administreras (COMPOSITION.prescription);\r\n- objekt i aktuell läkemedelslista, ordination eller läkemedelsjournal (COMPOSITION.medication_list); och\r\n- objekt i ett sammanfattande dokument för exempelvis vårdöverföring (COMPOSITION.transfer_summary) eller en remiss (COMPOSITION.request).\r\n\r\nI många fall är en läkemedelsbeställning simpel och omfattar vanligtvis en läkemedelsartikel med okomplicerade instruktioner för dosering och administrering. Denna arketyp är dock utformad för att även möjliggöra mer komplexa beställningar. Till exempel:\r\n- en reducerande dos av prednisolon under en period på några veckor;\r\n- titrering av insulin, med dosering beroende på testresultat;\r\n- flera läkemedel (del av samma läkemedelsregim) som ordinerats samtidigt. Exempelvis trippelbehandling för magsår; och\r\n- intravenös administrering av läkemedel eller näringstillskott, inklusive parenteral nutrition. \r\n\r\nArketypen har därför utformats för att hantera olika komplexiteter:\r\n- enkla beställningsinstruktioner som \"furosemid 40 mg två tabletter på morgonen och en vid lunch\" för att säkerställa kompatibilitet med befintliga system; och\r\n- läkemedelsmängden betecknas vanligtvis genom antal och motsvarande dosenhet. För att säkerställa kompatibilitet med befintliga system samt omfatta alla kliniska scenarier, kan det dock finnas alternativa redogörelser; genom att \r\n- strukturera detaljer för dosering, administreringsväg och tidpunkt för att uppnå fullständig specifikation. \r\n\r\nArketypen har även utformats så att strukturen för alla läkemedelsbeställningar omfattar:\r\n- komplexa och sekventiella läkemedelsbeställningar med samma beredningsstyrka; och\r\n- flera läkemedelsbeställningar kan under omständigheter där olika läkemedel eller preparat måste ges i följd länkas.\r\n\r\nArketypen är även lämplig för beställning av parenterala vätskor, trots att dessa normalt är \"ordinationsbara\" artiklar. I andra fall kan dock en separat \"parenteral vätskebeställning\" vara lämpligt. \r\n\r\nDe SLOTs som innehåller CLUSTER-arketyper används för att representera vis del av innehållet. Detta grundas på tre skäl:\r\n- För att säkerställa att en kärnarketyp kan användas för alla ovanstående användningsfall, samt möjliggöra flexibilitet där det behövs. Under exempelvis ”Detaljer om beredning” kan ytterligare information tilläggas. För läkemedel föreslås en kandidatarketyp. Det är även möjligt att andra CLUSTER-arketyper i framtiden kan krävas för ytterlige ändamål, såsom komplexa parenterala nutritionsordrar;\r\n- för att stödja återanvändning av arketyper i situationer där innehållet används i flera kliniska sammanhang, i synnerhet ACTION.medication-arketypen som används för registrering av dispensering, administrering osv; och\r\n- för att avlägsna mindre vanligt förekommande innehåll från kärnarketypen.\r\n\r\nFlera beställningar kan representeras som separata aktiviteter inom denna arketypsinstans, för hantering av beställningar av olika läkemedel, exempelvis terapi för H. pylori när det inte ordineras som enpack.\r\n\r\nDet bör nämnas att dessa användningsområden omfattar både fall av FHIR-läkemedelsorder och läkemedelsutlåtande. Denna arketyp är således anpassad för båda FHIR-resurserna, och används i lämpligt sammanhang.",
+          "misuse" : "Ska inte användas för att registrera aktiviteter relaterade till att utföra en beställning av läkemedel, vaccin, näringspreparat eller terapeutiska produkter, såsom information om administrering eller dispensering. Använd i stället ACTION.medication för detta ändamål.\r\n\r\nSka inte användas för att registrera beställning av blodprodukter, då denna aktivitet kräver annan klinisk process. Använd i stället INSTRUCTION.transfusion för detta ändamål.\r\n\r\nSka inte användas för att registrera beställning av insättning av implantat eller medicintekniska produkter som pacemaker och defibrillatorer. Använd i stället INSTRUCTION.procedure för detta ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar todos los aspectos de una orden de medicamento, vacuna, producto nutricional u otro ítem terapéutico para un individuo identificado.",
+          "keywords" : [ "medicamento", "orden", "prescribir", "prescripción", "terapéutica", "substancia", "droga", "terapéutico", "sin receta", "insumo terapéutico", "fármaco", "producto", "posología", "tratamiento", "fluido", "nutrición", "CPOE" ],
+          "use" : "Utilizar para el registro de todos los aspectos de una orden de medicamento, vacuna, producto nutricional u otro ítem terapéutico para un individuo identificado.\r\n\r\nSu objetivo es la utilización para cualquier orden de medicamento o ítems relacionados, ya sea que los prescriba un profesional de la salud o que se encuentren disponibles sin receta médica. El alcance de este arquetipo de medicamento incluye órdenes de vacuna, fluidos parenterales u otros insumos terpéuticos tales como vendajes, productos nutricionales u otros ítems que se aplican o son administrados para obtener un efecto terapéutico, y que tiene un patrón común de registro de datos.\r\n\r\nEste arquetipo seta diseñado para ser utilizado en un conjunto de contexto clínicos que incluyen, pero no se limitan, a:\r\n- un registro de una consulta clínica (COMPOSITION.encounter);\r\n- una prescripción escrita por un médico, odontólogo, enfermero u otro profesional de la salud, para una medicación o producto nutricional a ser dispensado y administrado (como parte de una COMPOSITION.prescription);\r\n- un ítem incluido en una lista de medicamentos recibidos actualmente, en una prescripción o en una lista de medicamentos (como parte de una COMPOSITION.medication_list); y como\r\n- un ítem incluido en un documento de resumen, tal como una transferencia de sitio de cuidados (COMPOSITION.transfer_summary) o una interconsulta (COMPOSITION.request).\r\n\r\nEn muchos casos una orden de medicamento será simple -típicamente para un solo ítem medicamentoso con instrucciones carentes de complejidad para su dispensación y administración. Sin embargo, este arquetipo también esta diseñado para permitir órdenes terapéuticas mas complejas, como por ejemplo:\r\n- la reducción de una dosis de prednisolona a lo largo de un período de semanas;\r\n- la titulación de insulina, donde la dosis dependerá de los resultados de una prueba;\r\n- la prescripción simultanea de varios medicamentos como parte de un régimen único de medicamentos, tales como la terapia triple para la úlcera péptica; y\r\n- la administración endovenosa de medicamentos o suplementos nutricionales, incluyendo nutrición parenteral.\r\n\r\nEl arquetipo ha sido por lo tanto diseñado para permitir diversos rangos de complejidad, desde:\r\n- instrucciones narrativas simples para órdenes tales como \"furosemida 40 miligramos, dos tabletas por la mañana y una al almuerzo\", para asegurar la compatibilidad con sistemas existentes\r\n- la cantidad de la medicación, usualmente representada en términos de un número y su correspondiente unidad de dosis, pero que alternativamente puede ser representada mediante una narrativa para asegurar compatibilidad con sistemas existentes y la cobertura de diferentes escenarios clínicos; hasta\r\n- el detalle estructurado de la dosis, vía de administración y temporalidad, para así representar una especificación completamente computable.\r\n\r\nTambién ha sido diseñado de modo tal que la estructura de una sola orden de medicamento permita representar:\r\n- una secuencia compleja de órdenes de medicamento que utiliza la misma potencia del preparado como una sola estructura de orden; y\r\n- múltiples órdenes de medicamentos encadenadas en circunstancias donde diferentes medicamentos o preparados deben ser administrados conforme a una secuencia.\r\n\r\nEste arquetipo es también adecuado para ordenar fluidos en entornos de cuidado donde es de uso corriente que estos ítems sean \"prescribibles\". EN otros contextos una orden separada de fluido parenteral podría ser mas apropiada.\r\n\r\nLos SLOTs que contienen arquetipos CLUSTER han sido utilizados para representar parte del contenido por tres razones:\r\n- Para asegurar un arquetipo de base que pueda ser utilizado en todos los casos arriba descritos pero que permitan flexibilidad alli donde esta es requerida, como por ejemplo el SLOT `Detalles de la preparación´ en el cual un mayor detalle estructurado puede ser agregado. Se ha sugerido un arquetipo candidato para Medicaciones. Es posible que otros arquetipos CLUSTER sean necesarios en el futuro para otros propósitos tal como las órdenes de nutrición parenteral compleja;\r\n- Para permitir la re-utilización del arquetipo en situaciones en las cuales el contenido ha sido identificado como utilizado también en otros contextos clínicos, en particular en forma apareada como el arquetipo ACTION.medication, para el registro de la dispensación, administración, etc. concretas; y\r\n- Para remover del arquetipo base los contenidos menos comúnmente utilizados.\r\n\r\nVarias órdenes pueden ser representadas como actividades separadas dentro de una sola instancia de este arquetipo, para el uso de órdenes fuertemente vinculadas (como la terapia del Helicobacter Pylori) cuando estas nos son prescriptas como paquete único.\r\n\r\nDebe tenerse en cuenta que estos usos subsumen lso casos de uso tanto de la Orden de Medicamento FHIR como de la Declaración de Medicamento, es decir que este arquetipo coincide con ambos recursos FHIR, utilizados en el contexto apropiado.",
+          "misuse" : "No debe ser utilizado para el registro de las actividades relacionadas con el cumplimiento de la orden del medicamento, vacuna, producto nutricional o ítem terapéutico, tal como los detalles de su administración o dispensa. Se debe utilizar el ACTION.medication para este propósito.\r\n\r\nNo debe ser utilizado para el registro de órdenes de sangre o sus preparados, lo cual involucra un proceso clínico fundamentalmente diferente que muy probablemente requiera otro tipo de información. Se debe utilizar el ACTION.transfusion para este propósito.\r\n\r\nNo debe ser utilizado para el registro de órdenes de inserción de implantes o dispositivos médicos tales como marcapasos o defibriladores. Se debe utilizar el ACTION.procedure para este propósito.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere alle aspekter av ordinering av et legemiddel, en vaksine, ernæringsprodukt eller medisinsk forbruksmateriell for et spesifikt individ.",
+          "keywords" : [ "medikasjon", "foreskriving", "forordning", "forordne", "terapi", "substans", "stoff", "virkestoff", "medikament", "legemiddel", "terapeutisk", "medisinsk forbruksmateriell", "ordinering", "preparat", "spesialpreparat", "diagnostikum", "forskrivning", "forskriving", "resept", "legemiddelhåndtering", "farmasøytisk", "produkt", "posologi", "ordinasjon", "rekvirering", "behandling", "væske", "ernæring", "ordinere", "medisin", "medisiner", "medisinering" ],
+          "use" : "Brukes for å registrere alle aspekter av ordinering av et legemiddel, en vaksine, enæringsvare eller medisinsk forbruksmateriell for et spesifikt individ.\r\n\r\nArketypen kan brukes i alle legemiddelrelaterte ordineringer, enten de er for reseptpliktige legemidler ordinert av en kliniker, eller for reseptfrie legemidler. Arketypen dekker også ordinering av vaksiner, parenterale væsker, eller medisinsk forbruksmateriell, som bandasjer, ernæringsprodukter eller andre varer som påføres eller administreres for å ha en terapeutisk effekt, og der dataene som skal registreres er de samme.\r\n\r\nArketypen er designet for bruk i en rekke ulike kliniske sammenhenger, for eksempel:\r\n- en registrering i en klinisk konsultasjon (COMPOSITION.encounter).\r\n- en resept skrevet av en lege, tannlege eller annet helsepersonell, på et legemiddel eller ernæringsprosdukt som skal utdeles eller administreres (i en COMPOSITION.prescription).\r\n- et element i en legemiddelliste, resept eller legemiddelkurve (COMPOSITION.medication_list)\r\n- et element i et oppsummeringsdokument som f.eks. en epikrise (COMPOSITION.transfer_summary) eller en henvisning (COMPOSITION.request).\r\n\r\nMerk at disse bruksområdene omfatter FHIR-ressursene for både Medication Order og Medication Statement.\r\n\r\nI mange tilfeller vil legemiddelordineringen være enkel - typisk for en enkelt legemiddelvare med ukompliserte instruksjoner for utdeling og administrering. Arketypen er imidlertid også utviklet for å tillate mer komplekse ordineringer, for eksempel:\r\n- ved nedtrapping av en prednisolondose over flere uker.\r\n- ved titrering av insulin, hvor dosering er avhengig av prøveresultater.\r\n- flere legemidler ordinert på samme tidspunkt som en del av et samlet behandlingsregime, for eksempel trippelbehandling for magesår.\r\n- ved parenteral administrering av legemidler eller ernæring, inkludert parenteral ernæring.\r\n\r\nArketypen er derfor utviklet for å tillate ulik kompleksitet, fra\r\n- enkle fritekstinstrukser for ordineringer som \"Furosemid 40 mg, to tabletter om morgenen og en til lunsj\" for å sikre kompatibilitet med eksisterende systemer, og\r\n- legemiddelmengden representeres som regel ved et tall med tilhørende måleenhet, alternativt med fritekst for å sikre kompatibilitet med eksisterende systemer og for å dekke alle kliniske scenarier\r\ntil\r\n- strukturerte detaljer for dose, administreringssvei og administreringsstidspunkter for at datamaskiner skal kunne lese og gjøre beregninger med dataene.\r\n\r\nArketypen er designet slik at en enkel legemiddelordinering kan representere:\r\n-komplekse sekvensielle legemiddelordineringer som bruker samme preparatstyrke i samme ordineringsstruktur.\r\n-flere legemiddelordineringer kan lenkes, der ulike legemidler eller blandinger må administreres sekvensielt.\r\n\r\nArketypen er også egnet for å ordinere væsker, der det er vanlig at disse ordineres. I andre sammenhenger kan det være mer passende å bruke en egen arketype for væskeforordninger.\r\n\r\nMengden av et legemiddel representeres vanligvis med et tall og en enhet, men det kan også dokumenteres i fritekst for å sikre kompatibilitet med eksisterende systemer og for å dekke alle scenarier.\r\n\r\nSLOTer med CLUSTER-arketyper brukes for å representere deler av innholdet av tre årsaker:\r\n- For å sikre en kjernearketype som kan brukes i alle de overnevnte brukscasene, men likevel være fleksibel der det trengs, f.eks. i SLOTet \"Legemiddeldetaljer\" der ytterligere strukturerte detaljer kan legges til. Det er foreslått en arketype for detaljer om legemidler, og det kan tenkes at man i fremtiden vil trenge andre CLUSTER-arketyper for andre formål, som f.eks. komplekse ordineringer av parenteral ernæring.\r\n- for å tillate gjenbruk av arketyper i situasjoner hvor innholdet også brukes i andre kliniske kontekster, i hovedsak i den tilhørende arketypen ACTION.medication for å registrere faktisk utdeling, administrering osv.\r\n- for å fjerne mindre brukt innhold fra arketypens rammeverk.\r\n\r\nDet er mulig å legge inn flere ordinasjoner som aktiviteter innenfor én instans av arketypen for å representere tett sammenbundne ordinasjoner av forskjellige legemidler, for eksempel en legemiddelpakke mot H. pylori der denne ikke ordineres som en enkelt pakning.\r\n\r\nMerk at disse bruksområdene innbefatter FHIR-ressursene for både \"Medication Order\" og \"Medication Statement\", det vil si at denne arketypen matcher begge disse FHIR-ressursene i passende brukssammenhenger.",
+          "misuse" : "Skal ikke brukes for å registrere faktisk administrering eller utdeling av legemidler, vaksiner, parenterale væsker, ernæringsprodukter eller medisinsk forbruksmateriell. Bruk arketypen ACTION.medication for dette formålet.\r\n\r\nSkal ikke brukes for å registrere ordinering av blodkomponenter, som omfatter en fundamentalt ulik klinisk prosess og sannsynligvis vil trenge ulik støtteinformasjon. Bruk arketypen INSTRUCTION.transfusion for dette formålet.\r\n\r\nSkal ikke brukes for å registrere ordinering av innlegging av implantater og medisinsk utstyr som pacemakere og defibrillatorer. Bruk arketypen INSTRUCTION.procedure for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar todos os aspectos de uma prescrição de medicamento, vacina, produtos nutricionais ou outros itens terapêuticos para um indivíduo identificado.",
+          "keywords" : [ "medicamento", "prescrição", "prescrever", "terapia", "substância", "droga", "terapêutico", "Otc", "produto terapêutico", "Farmacêutico", "produtos", "Posologia", "tratamento", "Solução", "nutrição", "Prescrição Eletrônica" ],
+          "use" : "Utilizado para registrar todos os aspectos da prescrição de medicamentos, vacinas, produtos nutricionais ou outros itens terapêuticos, para um indivíduo identificado.\r\n\r\nDestina-se a ser usado para qualquer tipo de medicamento e prescrição relacionada, quer seja prescrito por um profissional de saúde ou disponível para compra \"no balcão\"da farmácia. O escopo deste arquétipo de medicamentos também inclui prescrições de vacinas, fluidos parenterais ou outros produtos terapêuticos, como bandagens, produtos nutricionais ou outros ítens que possuem um padrão comum para o seu registro e são aplicados ou administrados com vistas a um efeito terapêutico. \r\n\r\nEste arquétipo é projetado para ser usado em vários contextos clínicos, incluindo, entre outros:\r\n- um registro em uma consulta clínica (COMPOSITION.encounter);\r\n- uma receita escrita por um médico, dentista, ou outro profissional de saúde autorizado para prescrever uma medicamento ou produto nutricional a ser dispensado e administrado (COMPOSITION.prescription);\r\n- um ítem em uma lista atual de medicamento, receita ou carta de medicamentos (dentro de COMPOSITION.medication_list); e\r\n- um ítem em um documento de resumo, como a transferência de cuidados (COMPOSITION.transfer_summary) ou um documento de contra-referência (COMPOSITION.request).\r\n\r\nEm muitos casos, uma prescrição de medicamento será simples - tipicamente para um único item de medicamento com instruções simples para a sua dispensação e administração. No entanto, este arquétipo foi também projetado para permitir prescrições mais complexas. Por exemplo:\r\n\r\n-\tuma redução de dose de prednisolona durante um período de semanas;\r\n-\tfracionamento de insulina, com dosagem dependente dos resultados do teste;\r\n-\tmedicamentos múltiplos prescritos simultaneamente como parte de um regime de fármaco único, como uma terapia tripla para úlcera péptica; e\r\n-\tadministração intravenosa de medicamentos ou suplementos nutricionais, incluindo nutrição parenteral.\r\n\r\nO arquétipo foi, portanto, projetado para atender prescrições de maior complexidade, como, por exemplo: \r\n-\tinstruções narrativas simples tais como \"furosemida 40mg dois comprimidos pela manhã e um no almoço\" para assegurar a compatibilidade com os sistemas existentes; \r\n-\ta quantidade do medicamento geralmente é representada por um número e uma unidade de dose correspondente, no entanto, pode haver uma descrição em texto livre para garantir a compatibilidade com os sistemas existentes e a cobertura de todos os cenários clínicos; através de\r\n-\tdetalhes estruturados para a dose, via e duração para representar uma especificação totalmente computável.\r\n\r\nEste arquétipo foi também projetado para que uma única estrutura de prescrição de medicamento possa representar:\r\n\r\n-\tPrescrições sequencias complexas de medicamento com a mesma concentração de preparação representados em uma única estrutura de prescrição; e\r\n-\tmúltiplas prescrições de medicamentos que podem ser encadeadas em circunstâncias em que diferentes medicamentos ou preparações precisem ser administrados sequencialmente.\r\n\r\nEste arquétipo é também adequado para prescrição de soluções parenterais, em cenários de atendimento onde é normal prescrever estes itens. Em outras cenários, uma prescrição separada de soluções parenterais poderá ser mais apropriada.\r\n\r\nSLOTs contendo arquétipos do tipo CLUSTER foram utilizados ​​para representar parte do conteúdo por três razões:\r\n-\tPara garantir que um arquétipo básico possa ser utilizado em todos os casos de uso descritos acima, oferecendo flexibilidade onde for necessário, por exemplo, o SLOT de \"Detalhes da preparação\", permite que detalhes adicionais estruturados da preparação possam ser adicionados. Existe um arquétipo sugerido para medicamentos. É possível que outros arquétipos do tipo CLUSTER sejam necessários no futuro, para outros fins, como pedidos complexos de nutrição parenteral;\r\n-\tapoiar a reutilização do arquétipo em situações em que o conteúdo foi identificado como sendo utilizado também em outros contextos clínicos, em particular o arquétipo ACTION.medication (para deste arquéitpo) para gravação de distribuição real, administração, etc. e\r\n-\tremover o conteúdo de menor utilização do núcleo do arquétipo. \r\n\r\nVárias prescrições podem ser representadas como atividades separadas nesta instância de arquétipo, para, por exemplo, representar prescrições de diferentes medicamentos, conectadas entre si, como ocorre na terapia de H. pylori, quando se opta por não prescrever como um único pacote.\r\n\r\nObservar que esses casos de usos acima descritos incluem os casos de uso da Prescrição de Medicamento e Medicamentos do FHIR. Isto é, este arquétipo é uma correspondência para ambos os recursos do FHIR, desde que utilizado no contexto apropriado.",
+          "misuse" : "Não deve ser utilizado para registrar as atividades relacionadas à realização da prescrição de medicação, vacina, produto nutricional ou item terapêutico, como detalhes sobre a administração ou a dispensação. Use o arquétipo ACTION.medication para este propósito.\r\n\r\nNão deve ser utilizado para registrar o pedido de produtos sanguíneos, o que envolve um processo clínico fundamentalmente diferente e é provável que exija informações adicionais diferentes. Use o arquétipo INSTRUCTION.transfusion para este propósito.\r\n\r\nNão deve ser utilizado para registrar a ordem de inserção de implantes ou dispositivos médicos, como marcapassos e desfibriladores. Utilize o procedimento INSTRUCTION.Para este fim.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record all aspects of an order of a medication, vaccine, nutritional product or other therapeutic item for an identified individual.",
+          "keywords" : [ "medication", "order", "prescribe", "therapy", "substance", "drug", "therapeutic", "otc", "therapeutic good", "pharmaceutical", "product", "posology", "treatment", "fluid", "nutrition", "CPOE", "medicine" ],
+          "use" : "Use to record all aspects of an order of a medication, vaccine, nutritional product or other therapeutic item for an identified individual.\r\n\r\nIt is intended to be used for any type of medication and related order, whether prescribed by a health professional or available for purchase 'over the counter'. The scope of this medication archetype also includes orders for vaccinations, parenteral fluids or other therapeutic goods, such as bandages, nutritional products or other items that are applied or administered to have a therapeutic effect and which have a common pattern for data recording.\r\n\r\nThis archetype is designed to be used in a number of clinical contexts, including but not limited to:\r\n- a record in a clinical consultation (COMPOSITION.encounter);\r\n- a written prescription by a physician, dentist, nurse practitioner, or other designated health professional for a medication or nutritional product to be dispensed and administered (within a COMPOSITION.prescription);\r\n- an item in a current medication list, prescription or drug chart (within COMPOSITION.medication_list); and\r\n- an item in a summary document such as transfer of care (COMPOSITION.transfer_summary) or a referral (COMPOSITION.request).\r\n\r\nIn many cases a medication order will be simple – typically for a single medication item with uncomplicated instructions for dispensing and administration. However this archetype is also designed to allow for more complex therapeutic orders. For example:\r\n\r\n- a reducing dose of prednisolone over a period of weeks;\r\n- titration of insulin, with dosing dependent on test results;\r\n- multiple medications prescribed simultaneously as part of a single drug regimen, such as a triple therapy for peptic ulcer; and\r\n- intravenous administration of medications or nutrition supplements, including parenteral nutrition.\r\n\r\nThe archetype has therefore been designed to allow for a range of complexity, from:\r\n- simple narrative instructions for orders like 'furosemide 40mg two tablets in the morning and one at lunch' to ensure compatibility with existing systems; and\r\n- the amount of medication is usually represented in terms of a number and corresponding dose unit, however there can alternatively be a narrative statement to ensure compatibility with existing systems and coverage of all clinical scenarios; through to\r\n- structured detail for dose, route and timing to represent a fully computable specification.\r\n\r\nIt has also been designed so that a single medication order structure can represent:\r\n- complex sequential medication orders using the same preparation strength to be supported within a single order structure; and\r\n- multiple medication orders can be chained in circumstances where different medications or preparations need to be given sequentially.\r\n\r\nThis archetype is also suitable for ordering parenteral fluids, in care settings where it is normal practice to make these 'prescribable' items. In other settings a separate 'parenteral fluid order' may be appropriate.\r\n\r\nSLOTs containing CLUSTER archetypes have been used to represent some of the content for three reasons:\r\n- To ensure a core archetype that can be used for all the above use cases, yet allow flexibility where it is required, for example the ‘Preparation details’ SLOT where additional structured detail can be added. A candidate archetype has been suggested for Medications. It is possible that other CLUSTER archetypes may be required in future for other purposes such as complex parenteral nutrition orders;\r\n- to support archetype re-use in situations where the content has been identified as being also used in other clinical contexts, in particular the paired ACTION.medication archetype for recording actual dispensing, administration etc; and\r\n- to remove less commonly used content from the core archetype framework.\r\n\r\nMultiple orders can be represented as separate activities within this single archetype instance to carry tightly bound orders of different medications, for example, H. pylori therapy when this is not prescribed as a single pack.\r\n\r\nIt should be noted that these uses subsume both the FHIR Medication Order and Medication Statement use cases. i.e this archetype is a match for both FHIR resources, used in the appropriate context.",
+          "misuse" : "Not to be used to record the activities related to carrying out the order for medication, vaccine, nutritional product or therapeutic item, such as details about actual administration or dispensing. Use the ACTION.medication for this purpose.\r\n\r\nNot to be used to record the ordering of blood products, which involves a fundamentally different clinical process and is likely to require different supporting information Use the INSTRUCTION.transfusion for this purpose.\r\n\r\nNot to be used to record the order for insertion of implants or medical devices such as pacemakers and defibrillators. Use the INSTRUCTION.procedure for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
     "differential" : true,
@@ -2620,7 +3220,53 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6900D18BA6F2C488398A4E20FFFF54AF"
       },
-      "details" : { }
+      "details" : {
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "*To provide a framework and design guidance for consistent modelling of content within a template for an Adverse reaction list. (en)",
+          "keywords" : [ "список", "реакция", "побочная", "известная", "исключение", "осложнение", "неблагоприятная" ],
+          "use" : "*Use as a framework and suggested design guidance for consistent modelling of content within a template for an Adverse reaction list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.adverse_reaction_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive presence of adverse reactions can be recorded using multiple instances of the EVALUATION.adverse_reaction_risk, one instance of the archetype per substance; OR\r\n- statements about the positive exclusion of adverse reactions can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive presence of adverse reactions nor a positive exclusion - can be recorded using the EVALUATION.absence archetype. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "*To provide a framework and design guidance for consistent modelling of content within a template for an Adverse reaction list. (en)",
+          "keywords" : [ "adverso", "reação", "exclusão", "ausência", "conhecido", "lista" ],
+          "use" : "*Use as a framework and suggested design guidance for consistent modelling of content within a template for an Adverse reaction list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.adverse_reaction_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive presence of adverse reactions can be recorded using multiple instances of the EVALUATION.adverse_reaction_risk, one instance of the archetype per substance; OR\r\n- statements about the positive exclusion of adverse reactions can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive presence of adverse reactions nor a positive exclusion - can be recorded using the EVALUATION.absence archetype. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a framework and design guidance for consistent modelling of content within a template for an Adverse reaction list.",
+          "keywords" : [ "adverse", "reaction", "exclusion", "absence", "known", "list" ],
+          "use" : "Use as a framework and suggested design guidance for consistent modelling of content within a template for an Adverse reaction list.\r\n\r\nThis archetype is intended to be used within the COMPOSITION.adverse_reaction_list or as one component of other COMPOSITION archetypes. For example: complex documents, such as a discharge summary or referral.\r\n\r\nThis list can be comprised of three types of statements, each represented by specific archetypes:\r\n- statements about the positive presence of adverse reactions can be recorded using multiple instances of the EVALUATION.adverse_reaction_risk, one instance of the archetype per substance; OR\r\n- statements about the positive exclusion of adverse reactions can be recorded using the specific EVALUATION.exclusion-global  - for example: 'No known adverse reactions'; OR\r\n- statements about no information being available - neither a positive presence of adverse reactions nor a positive exclusion - can be recorded using the EVALUATION.absence archetype.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.adverse_reaction_list.v0",
     "differential" : true,
@@ -2710,7 +3356,38 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "9EF496CE2674C98DB69128A66A43D030"
       },
-      "details" : { }
+      "details" : {
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Дизайн представления списка обоснования диагнозов",
+          "keywords" : [ "диагностический", "список", "обоснование", "уточненный", "лаборатория", "визуализация", "радиология", "патоморфология", "диагноз", "окончательный", "предварительный", "рабочий" ],
+          "use" : "Используется для поддержки представления списка обоснований диагноза",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a framework and design guidance for consistent modelling of diagnostic test resultswithin a template.",
+          "keywords" : [ "diagnostic", "report", "laboratory", "imaging", "radiology", "pathology", "list" ],
+          "use" : "Use to provide a framework and design guidance for consistent modelling of a diagnostic test results within a template.\r\n\r\nThis archetype is intended to be used as one component of complex COMPOSITION archetypes. For example: documents such as a discharge summary or referral.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.diagnostic_reports.v0",
     "differential" : true,
@@ -2805,7 +3482,145 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "D02DE57ACD4A04C1ADAE1F8B28197890"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation des Ergebnisses - einschließlich der Befunde und der Interpretation des Labors - einer Untersuchung, die an Proben durchgeführt wurde, die von einer Einzelperson stammen oder mit dieser Person zusammenhängen.",
+          "keywords" : [ "Labor", "Pathologie", "Biochemie", "Hämatologie", "Mikrobiologie", "Immunologie", "Laboratorium", "anatomisch", "chemisch", "klinisch", "Immunpathologie", "Zytologie", "Histopathologie", "Untersuchung", "Biopsie", "Probe", "forensisch", "genetisch bedingt", "Labormedizin", "Ergebnisse", "Analyse" ],
+          "use" : "Zur Dokumentation des Ergebnisses - einschließlich der Befunde und der Interpretation des Labors - einer Untersuchung, die an Proben durchgeführt wurde, die von einer Einzelperson stammen oder mit dieser Person zusammenhängen. Dies geschieht in der Regel in einem Labor, kann aber auch in anderen Bereichen, wie z.B. am Point of Care, durchgeführt werden. \r\n\r\nDieser Archetyp soll das Ergebnis einer erforderlichen Einzeluntersuchung abdecken, bei der die Probe(n) über ein Einzelverfahren gesammelt werden, und kann mehrere Ergebnisse zu Analyten oder andere Komponenten enthalten. Beispiele hierfür könnte das „Vollblutbild“ sein, das ein separates Analyseergebnis für die Zählung jedes Blutzelltyps liefert, oder „Nierenbiopsie nicht neoplastisch“, das Ergebnisse aus der Mikroskopie, Immunhistochemie und Elektronenmikroskopie liefern würde.\r\n\r\nDieser Archetyp wurde als Framework konzipiert, das in der Regel um CLUSTER-Archetypen erweitert wird, um eine angemessene Aufzeichnung spezifischer Labor-Testergebnismuster zu ermöglichen. Einschließlich aber nicht beschränkt auf: Tests für Biochemie, Hämatologie, Immunologie und Blutspendendienste etc. sowie spezifische Muster für die besonderen Anforderungen an Mikrobiologie und anatomische Pathologie. Wenn die in Auftrag gegebenen Tests oder Untersuchungen nicht gewöhnlich in einer benannten Gruppe oder einem benannten Panel zusammengehören, wird jedes Testergebnis in der Regel durch separate Instanzen dieses Archetyps dargestellt. Es gibt jedoch erhebliche Unterschiede in der tatsächlichen Berichts-/Messaging-Praxis, und dieser Archetyp/diese verwandten Archetypen sind so konzipiert, dass sie mit diesen Abweichungen umgehen können. \r\n\r\nDieser Archetyp unterstützt mehrere Ansätze zur Erfassung von Proben und spiegelt die aktuelle, sehr unterschiedliche Praxis wieder. Ein Laborergebnis hat einen hohen Grad an Übereinstimmung mit einer HL7 FHIR Diagnoseberichtsquelle. \r\n\r\nEs wird erwartet, dass ein oder mehrere Exemplare dieses Archetyps oder dieser Archetypfamilie an einen anfragenden Arzt innerhalb eines Labordokuments zurückgeschickt werden, das COMPOSITION.report_result Archetyp, oder ähnliche und andere relevante ENTRY Archetypen.\r\n\r\nDie Erfassung von Störfaktoren kann inkonsistent sein, weil es oft vom Quelllabor und von den klinischen Informationen, die angefordert worden, abhängt. Im State-Abschnitt des Archetyps gibt es ein einfaches Datenelement \"Confounding factors\", das optional ist und als eine Möglichkeit wiederholt werden kann, eine Vielzahl von einfachen Faktoren zu erfassen, die explizit gemacht werden müssen, da sie die Interpretation der Ergebnisse beeinflussen können. Wenn die Störfaktoren komplexer sind, kann es sinnvoll sein, einen lokalen/gemeinsamen CLUSTER-Archetyp zu erstellen, der im SLOT \"Confounding factors details\" ergänzt werden kann. \r\nHinweis 1: Bekannte oder erforderliche Voraussetzungen, wie z.B. \"Fasten\" oder \"Tag 1 des Menstruationszyklus\", sollten im Datenelement \"Probenbedingungen\" im Archetyp CLUSTER.Probe, verschachtelt innerhalb des OBSERVATION Archetypes, angegeben werden.\r\nHinweis 2: Bekannte Probleme bei der Probenentnahme oder Behandlung, wie z.B. \"Probe hämolysiert\" oder \"verlängerter Gebrauch von Tourniquet\", sollten unter \"Probenqualität\" im Archetyp CLUSTER.Probe, verschachtelt innerhalb des OBSERVATION Archetypes, angegeben werden.\r\n\r\nWerden vom Labor \"Reflextests\" durchgeführt, können diese gemäß den US/FHIR-Richtlinien (siehe https://www.hl7.org/fhir/2015may/uslabreportguide.html) oder anderen lokalen Richtlinien durchgeführt werden. Zum Beispiel eine der folgenden Punkte.... \r\n1. Protokollierung der Reflextestergebnisse zusätzliche \"Testergebnisse\" innerhalb derselben \"openEHR-EHROBSERVATION.Laborergebnis\". \r\n2. Protokollierung der Reflextestergebnisse zusätzliche \"Testergebnisse\" innerhalb derselben \"openEHR-EHROBSERVATION.Laborergebnis\", verweisen Sie aber über \"Testerforderungsdetails\" auf den ursprünglichen Labortestantrag. \r\n3. Protokollierung der Reflextestergebnisse zusätzliche \"Testergebnisse\" innerhalb derselben \"openEHR-EHROBSERVATION.Laborergebnis\" festhalten, aber über \"Testerforderungsdetails\" auf einen neuen Labortestantrag sowie den ursprünglichen Labortestantrag verweisen.\r\n\r\n\r\n\r\n\r\n\r\n",
+          "misuse" : "Nicht zur Dokumentation eines Autopsieberichts oder eines forensischen Berichts verwenden. Einzelne Proben, die bei einer Autopsie oder einem forensischen Bericht entnommen werden, können jedoch mit diesem Archetyp dargestellt werden. Für diese sind zusätzliche spezialisierte Archetypen erforderlich, um die Daten zu dokumentieren.\r\n\r\nDieser Archetyp eignet sich zur Darstellung allgemeiner Labortestergebnisse, jedoch nicht für vollständige synoptische Berichte. Für diese sind zusätzliche spezialisierte Archetypen erforderlich, um die Daten zu dokumentieren.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "För att registrera resultat, fynd och laboratoriets tolkning av en laboratorieundersökning utförd på provmaterial från en individ eller relaterad till individen.",
+          "keywords" : [ "labb", "patologi", "biokemi", "hematologi", "mikrobiologi", "immunologi", "laboratorium", "anatomisk", "kemisk", "klinisk", "immunopatolog", "cytologi", "histopatologi", "test", "biopsi", "prov", "provmaterial", "rättsmedicinsk", "genetisk", "laboratoriemedicin", "resultat", "analys" ],
+          "use" : "Används för att registrera resultatet, inklusive fynd och laboratoriets tolkning, av en laboratorieundersökning utförd på provmaterial från en individ eller relaterad till individen. Detta görs vanligtvis i ett laboratorium, men kan även göras i andra miljöer såsom patientcentrerad analys vid vårdplatsen.\r\n\r\nDenna arketyp är avsedd att täcka resultatet av en enda beställd undersökning där flera prov tas i ett enda förfarande och som kan innehålla flera analysresultat eller andra komponenter. \r\nExempel på detta kan inkludera \"fullständig blodstatus\", vilket skulle ge ett separat analysresultat för räkningen av varje typ av blodkropp, eller 'njurbiopsi - inget malignt', vilket skulle ge resultat från mikroskopi, immunhistokemi och elektronmikroskopi.\r\n\r\nDenna arketyp är utformad för att utgöra ett ramverk som vanligtvis kommer att utökas med CLUSTER-arketyper för registrering och rapportering av specifika mönster för laboratorieresultat. Detta inkluderar analyser inom biokemi, hematologi, immunologi och transfusionstjänster samt specifika mönster för de unika behoven inom mikrobiologi och patologi. Om de beställda analyserna eller undersökningarna inte tillhör en namngiven grupp, skulle varje testresultat normalt representeras med separata instanser av denna arketyp. Det finns dock stor variation i hur svarsrapportering sker och denna arketyp är utformad för att hantera den typen av variation.\r\n\r\nDen här arketypen stöder olika tillvägagångssätt för att kunna fånga den mångfald av analyser och metoder som finns tillgängliga. Ett resultat från ett laboratorium är idag i hög grad anpassat till HL7 FHIR-resursen Diagnostic Report.\r\n\r\nDet är troligt att hela eller delar av denna arketyp, tillsammans med relaterade arketyper, kommer att utgöra remissvar till remitterande läkare. Exempel på detta är COMPOSITION.report_result-arketypen eller motsvarande, och med relevanta ENTRY-arketyper.\r\n\r\nDenna arketyp stöder flera metoder för att registrera information om provmaterialet, vilket återspeglar de stora variationerna inom nuvarande praxis. Arketypen för laboratoriesvar har en hög grad av överensstämmelse med HL7 FHIR-resursen \"Diagnostic Report\".\r\n\r\nRegistrering av möjliga felkällor görs i praktiken oftast inte på ett konsekvent sätt. Detta kan bero både på avsändarlaboratoriet och på den kliniska information som skickats med från den vårdpersonal som skickat förfrågan. I \"State\"-delen av arketypen finns det ett enkelt dataelement, \"Möjliga felkällor\", som är valfritt och kan återupprepas som ett sätt att registrera en mängd olika enkla faktorer som måste göras tydliga eftersom de kan påverka tolkningen av resultaten. Om möjliga felkällor är av det mer komplexa slaget, kan det vara lämpligt att skapa en CLUSTER-arketyp som kan användas i SLOT ''Möjliga felkällor''.\r\n\r\nAnmärkning 1: Kända förhållanden eller förutsättningar för provtagning, såsom \"fasta\" eller \"dag 1 i menstruationscykeln\", bör registreras i dataelementet \"Provtagningsförhållanden\" i arketypen CLUSTER.Specimen (Provmaterial) nästlad i denna OBSERVATION-arketyp.\r\nAnmärkning 2: Kända problem med provtagning eller hantering av prover, såsom \"hemolys\" eller \"förlängd användning av stasslang\", bör registreras i \"Provkvalitetsproblem\" -elementet i CLUSTER.Specimen-arketypen och nästlas i denna OBSERVATION-arketyp.\r\n\r\nOm laboratoriet ändrar analyser eller lägger till analyser som uppföljning kan dessa hanteras enligt riktlinjer från HL7 FHIR (https://www.hl7.org/fhir/2015may/uslabreport-guide.html), eller enligt lokala förfaranden. Till exempel något av följande:\r\n1. Registrera de ändrade analyserna/tilläggsanalyserna inom samma instans av denna arketyp.\r\n2. Registrera de ändrade analyserna/tilläggsanalyserna i en ny instans av denna arketyp, men hänvisa till den ursprungliga beställningen via \"Beställningsdetaljer\".\r\n3. Registrera de ändrade analyserna/tilläggsanalyserna i en ny instans av den här arketypen, men hänvisa till en ny beställning utöver den ursprungliga via \"Beställningsdetaljer\".\r\n\r\n",
+          "misuse" : "Bör inte användas för att lagra en obduktionsrapport eller rättsmedicinsk undersökningsrapport, även om analysresultat för vissa provmaterial som tagits vid en obduktion kan representeras i denna arketyp. För att skapa den verkliga obduktions- eller kriminaltekniska rapporten måste man använda specialiserade arketyper.\r\n\r\nDenna arketyp är lämplig för att representera allmänna laboratoriesvar men är inte avsedd för sammanfattande patologisvar, där specialiserade arketyper bör användas istället.\r\n\r\n\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere resultat, funn og laboratoriets tolkning, av en laboratorieundersøkelse utført på prøvemateriale fra et individ eller relatert til individet.",
+          "keywords" : [ "medisinsk biokjemi", "medisinsk mikrobiologi", "medisinsk genetikk", "klinisk farmakologi", "patologi", "immunologi og transfusjonsmedisin", "laboratorie", "lab", "anatomisk", "prøve", "rettsmedisinsk", "laboratoriemedisin", "generell kjemi", "materiale", "prøvemateriale", "lokalisasjon", "undersøkelse", "analyse", "metode (analysemetode)", "laboratoriespesialitet", "blodprøve", "serum", "plasma", "fullblod", "analytt", "kapillærprøver", "venøse prøver", "arterielle prøver", "prøvetaking", "immunopatologi", "cytologi", "histopatologi", "biopsi", "preparat", "immunhistokjemi", "immuncytokjemi", "molekylærgenetiske analyser", "histologi", "cytologi", "cervixcytologi", "obduksjon", "flowcytometri", "molekylær patologi", "elektronmikroskopi", "neuropatologi", "frysesnitt", "punksjonscytologi", "makrobeskjæring", "makroskopisk undersøkelse", "mikrobiologi", "bakteriologi", "virologi", "serologi", "molekylærdiagnostikk", "parasittologi", "mykologi", "protozologi", "immunologi", "medisinsk immunologi", "transfusjonsmedisin", "immunhematologi", "transplantasjonsimmunologi", "cellulær immunologi", "ex vivo cellelaboratorium", "hormonanalyser", "endokrinologi", "blodbank", "blodkomponenter", "hematologi", "kjemisk", "klinisk", "kjemi", "klinisk kjemi", "klinisk biokjemi", "metabolsk molekylærbiologi", "homeostase og trombose", "koagulasjon", "klinisk farmakologi", "farmakologi", "doping analyser", "klinisk fysiologi", "toksikologi", "rusmiddelanalyse", "misbruksdiagnostikk", "genetisk", "genetikk", "HTS-diagnostikk", "genpaneler", "farmakogenetikk", "cancer cytogenetikk", "preparat", "rettsmedisinsk" ],
+          "use" : "Brukes for å registrere resultat, funn og laboratoriets tolkning, av en laboratorieundersøkelse utført på prøvemateriale fra et individ eller relatert til individet. Dette utføres typisk i et laboratorium, men kan også gjøres i andre miljøer, som for eksempel ved pasientnær analysering.\r\n\r\nDenne arketypen er ment å dekke resultatet av én rekvirert undersøkelse der prøvene er tatt i én prosedyre, og som kan ha flere analyseresultater eller andre komponenter. Eksempler på dette kan være \"Differensialtelling av leukocytter\", som gir et separat resultat for antallet av hver type hvite blodceller, eller \"Nyrebiopsi ikke-neoplastisk\", som gir resultater fra mikroskopi, immunohistokjemi og elektronmikroskopi.\r\n\r\nDenne arketypen er laget for å være et rammeverk som vanligvis vil utvides med CLUSTER-arketyper for å få en hensiktsmessig registrering og rapportering av spesifikke mønstre for laboratorieresultater. Dette kan omfatte analyser og undersøkelser innen kjemi (medisinsk biokjemi, hematologi, immunologi og transfusjonsmedisin, med mer), samt spesifikke mønstre for de unike behovene innenfor mikrobiologi og patologi. Hvis de rekvirerte analysene eller undersøkelsene ikke tilhører en navngitt gruppe, vil hvert resultat normalt representeres ved en separat instans av denne arketypen. Imidlertid er det stor variasjon på hvordan svarrapportering/meldingsformidling skjer, og denne arketypen er designet for å ivareta disse variasjonene.\r\n\r\nDenne arketypen støtter flere tilnærminger til å registrere informasjon om prøvematerialet, noe som reflekterer de store variasjonene innenfor dagens praksis. Laboratoriesvar-arketypen har høy grad av samsvar med HL7 FHIR-ressursen \"Diagnostic Report\".\r\n\r\nDet forventes at en eller flere instanser av denne arketypen, eller arketypefamilen vil bli sendt tilbake til rekvirenten i en laboratoriesvarrapport, for eksempel i arketypen COMPOSITION.report_result eller tilsvarende, og sammen med relevante ENTRY-arketyper.\r\n\r\nRegistrering av konfunderende faktorer gjøres i praksis ikke på en konsistent måte, og avhenger av avsenderlaboratoriet og av den kliniske informasjonen som ble sendt med fra rekvirenten. I \"State\"-delen av arketypen er det et valgfritt og repeterbart element for \"Konfunderende faktorer\" som kan brukes til å registrere enkle faktorer, som fordi de kan påvirke tolkningen av resultatet må registreres eksplisitt. Dersom de konfunderende faktorene er mer komplekse kan det være hensiktsmessig å lage en CLUSTER-arketype som kan brukes i SLOTet \"Strukturerte konfunderende faktorer\".\r\nNB 1: Kjente eller nødvendige forutsetninger, som for eksempel \"fastende\" eller \"dag 1 av menstruasjonssyklusen\" bør registreres i elementet \"Prøvetakingsforhold\" i arketypen CLUSTER.specimen, og nøstes inn i denne OBSERVATION-arketypen.\r\nNB 2: Kjente problemer med prøvetaking eller prøvehåndtering, som for eksempel \"hemolyse\" eller \"forlenget stase\" bør registreres i elementet \"Prøvekvalitet\" i arketypen CLUSTER.specimen, og nøstes inn i denne OBSERVATION-arketypen.\r\n\r\nDer laboratoriet endrer analyser eller legger til analyser som oppfølging, kan disse håndteres etter veilledning fra HL7 FHIR (https://www.hl7.org/fhir/2015may/uslabreport-guide.html), eller etter lokale prosedyrer. For eksempel en av følgende:\r\n1. Registrer de endrede analysene/tilleggsanalysene innenfor samme instans av denne arketypen.\r\n2. Registrer de endrede analysene/tilleggsanalysene i en ny instans av denne arketypen, men referer til den opprinnelige rekvisisjonen ved hjelp av \"Rekvisisjonsdetaljer\".\r\n3. Registrer de endrede analysene/tilleggsanalysene i en ny instans av denne arketypen, men referer til en ny rekvisisjon i tillegg til den opprinnelige rekvisisjonen, ved hjelp av \"Rekvisisjonsdetaljer\".",
+          "misuse" : "Skal ikke brukes for å lagre en sammenstilling etter obduksjon eller rettsmedisinsk undersøkelse, selv om prøver av noen prøvematerialer som blir tatt i en obduksjon kan bli representert i denne arketypen. For å lage selve obduksjons- eller den rettsmedisinske rapporten må man bruke spesialiserte arketyper.\r\n\r\nDenne arketypen er passende for å representere generelle laboratoriesvar, men er ikke ment å dekke komplette sammendragsrapporter (\"synoptic reports\") innenfor patologi. For disse trengs det i tillegg spesialiserte arketyper.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Documentar o resultado, incluindo achados e a interpretação do laboratório, de uma investigação realizada em amostras coletadas de um indivíduo ou relacionadas a esse indivíduo.",
+          "keywords" : [ "lab", "laboratório", "patologia", "bioquímica", "hematologia", "microbiologia", "imunologia", "anatomia", "química", "clínico", "imunopatologia", "citologia", "histopatologia", "teste", "biópsia", "espécimen", "forense", "genético", "laboratório médico", "laboratório clínico", "resultados", "análises", "análises clínicas" ],
+          "use" : "Use para documentar o resultado, incluindo achados e a interpretação do laboratório, de uma investigação realizada em amostras coletadas de um indivíduo ou relacionadas a esse indivíduo. Isso normalmente é feito em um laboratório, mas pode ser feito em outros ambientes, como no próprio local de atendimento (point of care).\r\n\r\nEste arquétipo se destina a cobrir o resultado de uma única investigação solicitada, onde a(s) amostra(s) é(são) coletada(s) como um único procedimento e pode(m) incluir múltiplos resultados de analitos ou outros componentes. Exemplos disso podem incluir 'hemograma completo', que produziria um resultado separado (analito) para a contagem de cada tipo de célula sanguínea, ou 'biópsia renal não neoplásica', que produziria resultados de microscopia, imunohistoquímica e microscopia eletrônica.\r\n\r\nEste arquétipo foi projetado para ser uma estrutura que normalmente será ampliada com os arquétipos CLUSTER para permitir o registro apropriado de padrões de resultados de testes laboratoriais específicos. Isso inclui, mas não está limitado a, testes de bioquímica, hematologia, imunologia e serviços de transfusão, entre outros e padrões específicos para as solicitações de microbiologia e anatomia patológica. Se os testes ou investigações solicitados não pertencerem comumente a um grupo ou painel nomeado, cada resultado do teste será representado usando instâncias separadas deste arquétipo. Há, no entanto, uma variação considerável na prática real de relatórios/mensagens e esse arquétipo/arquétipos relacionados são projetados para lidar com essa variação.\r\n\r\nEste arquétipo oferece suporte a várias abordagens para o registro de espécimes, refletindo a prática atual que varia enormemente. Um resultado de teste de laboratório tem um alto grau de alinhamento com um recurso de relatório de diagnóstico HL7 FHIR (HL7 FHIR Diagnostic Report resource).\r\n\r\nÉ esperado que uma ou mais instâncias deste arquétipo, ou família de arquétipos, sejam enviadas de volta a um médico solicitante em um documento de relatório de laboratório compreendendo o arquétipo COMPOSITION.report_result, ou semelhante, e outros arquétipos de ENTRY relevantes.\r\n\r\nO registro de fatores de confusão pode ser inconsistente, geralmente dependendo do laboratório de análise e das informações clínicas enviadas pelo solicitante. Na seção Estado (State) do arquétipo, há um elemento de dados simples de 'Fatores de confusão' que é opcional e pode ser repetido como uma forma de registrar uma variedade de fatores simples que precisam ser explicitados, pois podem influenciar a interpretação dos resultados. Se os fatores de confusão forem mais complexos, pode ser apropriado criar um arquétipo CLUSTER local/compartilhado que pode ser aninhado no SLOT 'Detalhes dos fatores de confusão'.\r\nNota 1: Pré-condições conhecidas ou exigidas, como 'jejum' ou 'Dia 1 do ciclo menstrual', devem ser relatadas no elemento de dados 'Condições de amostragem' no arquétipo CLUSTER.specimen, contido neste arquétipo de OBSERVAÇÃO (OBSERVATION).\r\nNota 2: Problemas conhecidos com a coleta ou manuseio de amostras, como 'amostra hemolisada' ou 'uso prolongado de torniquete', devem ser relatados em 'Qualidade da amostra' no arquétipo de CLUSTER.specimen, contido neste arquétipo de OBSERVAÇÃO (OBSERVATION).\r\n\r\nOnde 'testes de reflexo' são realizados pelo laboratório, eles podem ser realizados de acordo com a orientação dos US/FHIR (consulte https://www.hl7.org/fhir/2015may/uslabreport-guide.html) ou outra política local. Por exemplo, um dos seguintes ...\r\n1. Registre os resultados adicionais do teste de reflexo nos 'Resultados do teste' dentro do mesmo 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Registre os resultados do teste de reflexo como 'Resultados do teste' em um novo 'openEHR-EHR-OBSERVATION.laboratory_test_result', mas referencie à solicitação de teste de laboratório original em 'Detalhes da solicitação de teste'.\r\n3. Registre os resultados do teste de reflexo como 'Resultados do teste' em um novo 'openEHR-EHR-OBSERVATION.laboratory_test_result', mas referencie uma nova solicitação de teste de laboratório, bem como a solicitação de teste de laboratório original por meio de 'Detalhes da solicitação de teste'.",
+          "misuse" : "Não deve ser usado para registrar uma Autópsia ou Relatório Forense, embora os testes em alguns espécimes que são tirados em tais situações possam ser representados usando este arquétipo. Para estes fins, arquétipos adicionais ou especializados serão necessários.\r\n\r\nEste arquétipo é adequado para representação de resultados de testes laboratoriais gerais, mas não se destina a cobrir relatórios sinópticos completos. Para representar estes dados, arquétipos especializados adicionais são necessários.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual.",
+          "keywords" : [ "lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory", "anatomical", "chemical", "clinical", "immunopathology", "cytology", "histopathology", "test", "biopsy", "specimen", "forensic", "genetic", "laboratory medicine", "results", "analysis" ],
+          "use" : "Use to record the result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual. This is typically done in a laboratory, but may be done in other environments such as at the point of care.\r\n\r\nThis archetype is intended to cover the result of a single ordered investigation where the specimen(s) are collected as a single procedure, and may include multiple analyte results or other components. Examples of this could include 'Full blood count', which would yield a separate analyte result for the count of each type of blood cell, or 'kidney biopsy non-neoplastic', which would yield findings from microscopy, immunohistochemistry and electron microscopy.\r\n\r\nThis archetype has been designed to be a framework that will usually be extended with CLUSTER archetypes to enable appropriate recording of specific laboratory test result patterns. This includes, but is not limited to, tests for biochemistry, haematology, immunology and transfusion services etc and specific patterns for the unique requirements for microbiology and anatomical pathology. If the ordered tests or investigations do not commonly belong together in a named group or panel, each test result would normally be represented using separate instances of this archetype. There is, however, considerable variation in actual reporting/messaging practice and this archetype/related archetypes are designed to handle such variation.\r\n\r\nThis archetype supports multiple approaches to recording of specimen, reflecting current practice which varies enormously. A Laboratory test result has a high degree of alignment to an HL7 FHIR Diagnostic Report resource.\r\n\r\nIt is anticipated that one or more instances of this archetype, or archetype family, will be sent back to a requesting clinician within a laboratory report document comprising COMPOSITION.report_result archetype, or similar, and other relevant ENTRY archetypes.\r\n\r\nThe recording of confounding factors may be inconsistent, often depending on the analysing laboratory and on clinical information sent by the requester. In the State section of the archetype there is a simple 'Confounding factors' data element that is optional and can be repeated as one way to record a variety of simple factors that need to be made explicit as they may influence interpretation of the results. If the confounding factors are more complex, it may be appropriate to create a local/shared CLUSTER archetype that can be nested in the 'Confounding factors details' SLOT. \r\nNote 1: Known or required pre-conditions, such as 'fasting' or 'Day 1 of menstrual cycle', should be reported in the 'Sampling conditions' data element in the CLUSTER.specimen archetype, nested within this OBSERVATION archetype.\r\nNote 2: Known issues with specimen collection or handling, such as 'sample haemolysed' or 'prolonged use of tourniquet' should be reported within 'Specimen quality' in the CLUSTER.specimen archetype, nested within this OBSERVATION archetype.\r\n\r\nWhere 'reflex tests' are performed by the laboratory, these may be handled as per US/FHIR guidance (see https://www.hl7.org/fhir/2015may/uslabreport-guide.html) or other local policy. For example, one of the following ...\r\n1. Record the reflex test results additional 'Test findings' within the same 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Record the reflex test results as 'Test findings' within a new 'openEHR-EHR-OBSERVATION.laboratory_test_result' but refer to the original lab test request via 'Test request details'.\r\n3. Record the reflex test results as 'Test findings' within a new 'openEHR-EHR-OBSERVATION.laboratory_test_result' but reference a new lab test request as well as the original lab test request via 'Test request details'.",
+          "misuse" : "Not to be used to record an Autopsy or a Forensic report, although tests on some specimens that are taken in such situations may be represented using this archetype. For these, additional or specialised archetypes will be required to represent the data.\r\n\r\nThis archetype is suitable for representation of general laboratory test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.\r\nو يمثل هذا النموذج كوالد (أب) للتخصيصات الأخرى لاختبارات معملية أكثر تحديدا مثل الميكروبيولوجيا و الهيستوباثولوجيا.",
+          "keywords" : [ "المعمل - المختبر", "الباثولوجيا - المرضية", "الكيمياء الحيوية", "الدمويات", "الميكروبيولوجيا", "المناعيات - علم المناعة" ],
+          "use" : "قد يستخدم لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.\r\n\r\nيتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.",
+          "misuse" : "قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare il risultato, compresi i riscontri e l'interpretazione del laboratorio, di un'indagine effettuata su campioni raccolti su un individuo o relativi a quell'individuo.",
+          "keywords" : [ "lab, patologia, biochimica, ematologia, microbiologia, immunologia, laboratorio, anatomia, chimica, clinica, immunopatologia, citologia, istopatologia, test, biopsia, campione, medicina legale, genetica, medicina di laboratorio, risultati, analisi" ],
+          "use" : "Utilizzato per registrare il risultato, compresi i riscontri e l'interpretazione del laboratorio, di un'indagine effettuata su campioni raccolti su un individuo o relativi a quell'individuo. Questo è tipicamente fatto in un laboratorio, ma può essere fatto in altri ambienti, come ad esempio al punto di cura.\r\n\r\nQuesto archetipo è inteso per coprire il risultato di una singola indagine ordinata in cui il campione o i campioni sono raccolti come un'unica procedura, e può includere risultati di analiti multipli o altri componenti. Esempi di ciò potrebbero includere l' \"emocromo completo\", che darebbe un risultato dell'analisi separato per il conteggio di ciascun tipo di cellula del sangue, o la \"biopsia renale non neoplastica\", che darebbe risultati da microscopia, immunoistochimica e microscopia elettronica.\r\n\r\nQuesto archetipo è stato progettato per essere un quadro di riferimento che di solito viene esteso con archetipi CLUSTER per consentire la registrazione appropriata di specifici modelli di risultati di test di laboratorio. Questo include, ma non si limita ai test per la biochimica, l'ematologia, l'immunologia e i servizi trasfusionali, ecc. e pattern specifici per i requisiti specializzati per microbiologia e anatomia patologica. Se i test o le indagini ordinati non appartengono comunemente a un gruppo o a un panel, ogni risultato di test verrebbe normalmente rappresentato utilizzando istanze separate di questo archetipo. Vi è, tuttavia, una notevole variazione nella pratica effettiva di refertazione/comunicazione e questo archetipo e gli archetipi correlati sono progettati per gestire tale variazione.\r\n\r\nQuesto archetipo supporta approcci multipli alla registrazione dei campioni, riflettendo la pratica corrente che varia enormemente. Il risultato di un test di laboratorio ha un alto grado di allineamento con la risorsa HL7 FHIR Diagnostic Report.\r\n\r\nSi prevede che una o più istanze di questo archetipo, o famiglia di archetipi, saranno inviate ad un clinico richiedente all'interno di un documento di rapporto di laboratorio che comprende l'archetipo COMPOSITION.report_result, o simile, e altri archetipi ENTRY rilevanti.\r\n\r\nLa registrazione dei fattori di confusione può essere incoerente, spesso a seconda del laboratorio di analisi e delle informazioni cliniche inviate dal richiedente. Nella sezione Stato dell'archetipo c'è un semplice elemento (\"fattori di confondimento\"), che è facoltativo e può essere ripetuto come un modo per registrare una varietà di semplici fattori che devono essere resi espliciti in quanto possono influenzare l'interpretazione dei risultati. Se i fattori confondenti sono più complessi, può essere opportuno creare un archetipo CLUSTER locale o condiviso, che può essere annidato nello SLOT \"Dettagli dei fattori confondenti\".\r\nNota 1: Le precondizioni conosciute o richieste, come il 'digiuno' o il 'Giorno 1 del ciclo mestruale', devono essere riportate nell'elemento di dati 'Condizioni di campionamento' dell'archetipo CLUSTER.specimen, annidato all'interno di questo archetipo OSSERVAZIONE.\r\nNota 2: I problemi noti relativi alla raccolta o al trattamento dei campioni, come \"emolisi del campione\" o \"uso prolungato del laccio emostatico\", devono essere riportati in \"Qualità del campione\" nell'archetipo CLUSTER.specimen, annidato all'interno di questo archetipo OBSERVATION.\r\n\r\nSe i \"reflex test\" vengono eseguiti dal laboratorio, questi possono essere gestiti secondo le linee guida US/FHIR (vedi https://www.hl7.org/fhir/2015may/uslabreport-guide.html) o altre politiche locali. Ad esempio, uno dei seguenti ...\r\n1. Registrare i risultati addizionali dei reflex test come 'Risultati dei test' all'interno dello stesso 'openEHR-EHR-OBSERVATION.laboratory_test_result'.\r\n2. 2. Registrare i risultati del reflex test come 'Risultati del test' all'interno di un nuovo 'openEHR-EHR-OBSERVATION.laboratory_test_result', ma fare riferimento alla richiesta originale del test di laboratorio tramite 'Dettagli della richiesta di test'.\r\n3. 3. Registrare i risultati del reflex test come 'Risultati del test' all'interno di un nuovo 'openEHR-EHR-OBSERVATION.laboratory_test_result', ma fare riferimento alla nuova richiesta di test di laboratorio insieme alla richiesta originale di test di laboratorio tramite 'Dettagli della richiesta di test'.",
+          "misuse" : "Da non utilizzare per registrare un'autopsia o un rapporto forense, anche se i test su alcuni campioni prelevati in tali situazioni possono essere rappresentati utilizzando questo archetipo. Per questi, saranno necessari archetipi aggiuntivi o specializzati per rappresentare i dati.\r\n\r\nQuesto archetipo è adatto per la rappresentazione dei risultati generali dei test di laboratorio, ma non è destinato a coprire i rapporti sinottici completi. Per questi, sono necessari ulteriori archetipi specializzati per rappresentare i dati.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "用于记录针对组织和体液等标本所进行的病理学实验室检验项目的发现/所见和解释。这通常是由实验室来完成，但也可能会是在其他环境下完成的，如床旁。",
+          "keywords" : [ "实验室", "医学实验室", "临床实验室", "中心实验室", "检验科", "化验室", "化验科", "病理学", "检验医学", "检验", "医学检验", "临床检验医学", "临床检验", "生物化学", "生化", "血液学", "微生物学", "免疫学", "解剖学", "化学", "临床", "免疫病理学", "细胞学", "组织病理学", "试验", "试验项目", "检验项目", "化验项目", "报告项目", "活组织检查", "活检", "标本", "样本", "样品", "试样", "法医学", "遗传学" ],
+          "use" : "用于记录任何病理学实验室检验结果，包括作为某个组合型操作项目或手术的组成部分而进行的针对某种标本的某一检验项目所获得的结果。\r\n\r\n可以采用模板或专用原始型来表达多种分析物的组套。\r\n\r\n对于那些需要额外报告内容的，诸如组织病理学或微生物学之类较为复杂的检验项目，则应当采用专用的原始型来表达。\r\n\r\n实验室检验报告与HL7 FHIR 诊断报告资源DiagnosticReport之间具有高度的一致性。\r\n\r\n在完整的基于组合式文档的报告的背景下，通常会作为一个构成要素，回报给申请医生。",
+          "misuse" : "并非旨在用于报告非病理学检验结果，如影像学诊断、心电图或呼吸功能试验。\r\n\r\n并非旨在用于表达完整的累积型报告。当前这一实验室检验结果原始型表达的仅仅是，累积型检验项目报告之中通常被视为纵列的结果集合之一。累积型报告是一种视图，是利用由多个观测指标OBSERVATION原始型所表示的结果构建而成。\r\n\r\n并非旨在用于记录活组织检查报告，尽管可以采用此原始型来表示，针对活组织检查时所采集标本进行的检验项目。\r\n\r\n此原始型适合于表达一般性的病理学检验结果，但并未打算涵盖完整的提要式报告。对于此类报告，则需要采用额外的特化性原始型来表达相应的数据。\r\n\r\n此原始型在设计上已经支持临床病理学，但可能并不适合于其他种类的病理学用途。",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Voor het vastleggen van de uitslag, inclusief bevindingen en de interpretatie van het laboratorium, van een onderzoek uitgevoerd op een specimen van een individu of gerelateerd aan een individu.",
+          "keywords" : [ ],
+          "use" : "*Use to record the result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual. This is typically done in a laboratory, but may be done in other environments such as at the point of care.\r\n\r\nThis archetype is intended to cover the result of a single ordered investigation where the specimen(s) are collected as a single procedure, and may include multiple analyte results or other components. Examples of this could include 'Full blood count', which would yield a separate analyte result for the count of each type of blood cell, or 'kidney biopsy non-neoplastic', which would yield findings from microscopy, immunohistochemistry and electron microscopy.\r\n\r\nThis archetype has been designed to be a framework that will usually be extended with CLUSTER archetypes to enable appropriate recording of specific laboratory test result patterns. This includes, but is not limited to, tests for biochemistry, haematology, immunology and transfusion services etc and specific patterns for the unique requirements for microbiology and anatomical pathology. If the ordered tests or investigations do not commonly belong together in a named group or panel, each test result would normally be represented using separate instances of this archetype. There is, however, considerable variation in actual reporting/messaging practice and this archetype/related archetypes are designed to handle such variation.\r\n\r\nThis archetype supports multiple approaches to recording of specimen, reflecting current practice which varies enormously. A Laboratory test result has a high degree of alignment to an HL7 FHIR Diagnostic Report resource.\r\n\r\nIt is anticipated that one or more instances of this archetype, or archetype family, will be sent back to a requesting clinician within a laboratory report document comprising COMPOSITION.report_result archetype, or similar, and other relevant ENTRY archetypes.\r\n\r\nThe recording of confounding factors may be inconsistent, often depending on the analysing laboratory and on clinical information sent by the requester. In the State section of the archetype there is a simple 'Confounding factors' data element that is optional and can be repeated as one way to record a variety of simple factors that need to be made explicit as they may influence interpretation of the results. If the confounding factors are more complex, it may be appropriate to create a local/shared CLUSTER archetype that can be nested in the 'Confounding factors details' SLOT. \r\nNote 1: Known or required pre-conditions, such as 'fasting' or 'Day 1 of menstrual cycle', should be reported in the 'Sampling conditions' data element in the CLUSTER.specimen archetype, nested within this OBSERVATION archetype.\r\nNote 2: Known issues with specimen collection or handling, such as 'sample haemolysed' or 'prolonged use of tourniquet' should be reported within 'Specimen quality' in the CLUSTER.specimen archetype, nested within this OBSERVATION archetype.\r\n\r\nWhere 'reflex tests' are performed by the laboratory, these may be handled as per US/FHIR guidance (see https://www.hl7.org/fhir/2015may/uslabreport-guide.html) or other local policy. For example, one of the following ...\r\n1. Record the reflex test results additional 'Test findings' within the same 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Record the reflex test results as 'Test findings' within a new 'openEHR-EHR-OBSERVATION.laboratory_test_result' but refer to the original lab test request via 'Test request details'.\r\n3. Record the reflex test results as 'Test findings' within a new 'openEHR-EHR-OBSERVATION.laboratory_test_result' but reference a new lab test request as well as the original lab test request via 'Test request details'.(en)",
+          "misuse" : "*Not to be used to record an Autopsy or a Forensic report, although tests on some specimens that are taken in such situations may be represented using this archetype. For these, additional or specialised archetypes will be required to represent the data.\r\n\r\nThis archetype is suitable for representation of general laboratory test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -2914,16 +3729,7 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DATE_TIME",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -3030,16 +3836,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0111.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_BOOLEAN",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3427,7 +4224,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "4EEBF60E8DC0E6081786D1F0B30149DA"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "*To record the findings on imaging examination of a specified body structure or region and their interpretation, using radiological techniques. (en)",
+          "keywords" : [ "*image, radiology, modality, xray, CT, ultrasound, MRI, diagnostic, scan, x-ray, imaging, biomagnetic, densitometry, tomography, radiography, magnetic, resonance, mammography, nuclear, medicine, positron, PET, angiography, fluoroscopy (en)" ],
+          "use" : "*Use to record the findings on imaging examination of a specified body structure or region and their interpretation, using radiological techniques.\r\n\r\nThis archetype has been designed to focus on the reporting of findings and interpretation associated with a single imaging examination (equivalent to a single DICOM study). References to DICOM-related attributes are included but the focus is on the representation of a clinical report from an imaging examination and not on representing DICOM-related attributes that might be expected within a radiology information system. Specific details about the DICOM series can be recorded using the CLUSTER.imaging_series nested within the 'Series details' SLOT.\r\n\r\nDetailed findings observed during an imaging examination and targeting a specified structure or region can be recorded by nesting the CLUSTER.imaging_exam and/or its family of specialised archetypes within the 'Structured imaging findings' SLOT in this archetype. It is intended that over time the specific detail in each specialisation will grow to include findings using all imaging modalities.\r\n\r\nIf an imaging examination is carried out as part of a more complex activity, such as a surgical operation carried out under imaging guidance, the imaging findings should be recorded using this archetype. \r\nStructured details about the surgical procedure and medications or contrast administered should be recorded using the ACTION.procedure and/or ACTION.medication archetypes, respectively. In this situation, it is recommended that all related archetypes should be reported within the same template.\r\n\r\nThis result will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report. (en)",
+          "misuse" : "*Not to be used to record findings on physical examination. Use the CLUSTER.exam and/or its family of specialised archetypes for this purpose.\r\n\r\nNot to be used to replicate the functionality or specifications of a radiology information or source system.\r\n\r\nNot to be used to record structured details about any procedure undertaken. Use the specific procedure-related archetypes, such as ACTION.procedure archetype for this purpose.\r\n\r\nNot to be used to record structured details about medications administered during the imaging test. Use specific medication-related archetypes, such as the ACTION.medication archetype for this purpose.\r\n\r\nNot to be used to record photographs or videos  within the health record. Use the CLUSTER.media_file archetype for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "*To record the findings on imaging examination of a specified body structure or region and their interpretation, using radiological techniques. (en)",
+          "keywords" : [ "*image, radiology, modality, xray, CT, ultrasound, MRI, diagnostic, scan, x-ray, imaging, biomagnetic, densitometry, tomography, radiography, magnetic, resonance, mammography, nuclear, medicine, positron, PET, angiography, fluoroscopy (en)" ],
+          "use" : "*Use to record the findings on imaging examination of a specified body structure or region and their interpretation, using radiological techniques.\r\n\r\nThis archetype has been designed to focus on the reporting of findings and interpretation associated with a single imaging examination (equivalent to a single DICOM study). References to DICOM-related attributes are included but the focus is on the representation of a clinical report from an imaging examination and not on representing DICOM-related attributes that might be expected within a radiology information system. Specific details about the DICOM series can be recorded using the CLUSTER.imaging_series nested within the 'Series details' SLOT.\r\n\r\nDetailed findings observed during an imaging examination and targeting a specified structure or region can be recorded by nesting the CLUSTER.imaging_exam and/or its family of specialised archetypes within the 'Structured imaging findings' SLOT in this archetype. It is intended that over time the specific detail in each specialisation will grow to include findings using all imaging modalities.\r\n\r\nIf an imaging examination is carried out as part of a more complex activity, such as a surgical operation carried out under imaging guidance, the imaging findings should be recorded using this archetype. \r\nStructured details about the surgical procedure and medications or contrast administered should be recorded using the ACTION.procedure and/or ACTION.medication archetypes, respectively. In this situation, it is recommended that all related archetypes should be reported within the same template.\r\n\r\nThis result will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report. (en)",
+          "misuse" : "*Not to be used to record findings on physical examination. Use the CLUSTER.exam and/or its family of specialised archetypes for this purpose.\r\n\r\nNot to be used to replicate the functionality or specifications of a radiology information or source system.\r\n\r\nNot to be used to record structured details about any procedure undertaken. Use the specific procedure-related archetypes, such as ACTION.procedure archetype for this purpose.\r\n\r\nNot to be used to record structured details about medications administered during the imaging test. Use specific medication-related archetypes, such as the ACTION.medication archetype for this purpose.\r\n\r\nNot to be used to record photographs or videos  within the health record. Use the CLUSTER.media_file archetype for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere funn på og tolkning av bilder som er gjort ved radiologiske metoder på spesifikke strukturer eller regioner i kroppen.",
+          "keywords" : [ "bilde", "radiologi", "modalitet", "røntgen", "CT", "ultralyd", "MR", "diagnostisk", "biomagnetisk", "densitometri", "tomografi", "radiografi", "nukleær", "positron", "PET", "fluoroskopi", "bildeveiledet", "gjennomlysning", "nukleærmedisinsk", "angiografi" ],
+          "use" : "Brukes for å registrere funn på og tolkning av bilder som er gjort ved radiologiske metoder på spesifikke strukturer eller regioner i kroppen.\r\n\r\nDenne arketypen har blitt laget med fokus på svarrapportering av funn og tolkning en enkelt bildediagnostisk undersøkelse (tilsvarende en enkelt \"DICOM Study\"). Referanser til DICOM-relaterte attributter er inkludert, men fokuset er på representasjonen av en klinisk rapport fra en bildeundersøkelse og ikke på å representere DICOM-relaterte attributter som kan forventes i et radiologiinformasjonssystem (RIS/PACS). Spesifikke detaljer om DICOM-serien kan registreres ved å nøste arketypen CLUSTER.imaging_study_details i SLOT'et \"Detaljer om undersøkelsesserier\".\r\n\r\nDetaljerte funn som er gjort ved en bildediagnostisk undersøkelse som er rettet mot en spesifikk struktur eller region i kroppen, kan registreres ved å nøste CLUSTER.imaging_exam (Bildediagnostisk undersøkelse - kroppsstruktur) eller en av de spesialiserte CLUSTER.imaging_exam arketypene i SLOT'et \"Strukturerte funn\" i denne arketypen. Det er tenkt at det over tid vil det bli utviklet slike spesialiseringer som hver for seg omhandler funn fra alle modaliteter.\r\n\r\nHvis den bildediagnostiske undersøkelsen er en del av en mer kompleks prosedyre, som en kirurgisk operasjon som utføres under bildeveiledning, skal de radiologiske funn og observasjoner bli registrert i denne arketypen. Strukturerte detaljer om den kirurgiske prosedyren og administrasjon av medikasjon eller kontrast bør registreres i henholdsvis ACTION.procedure (Prosedyre) og/eller ACTION.medication (Legemiddelhåndtering). I dette tilfelle anbefales det at alle relaterte arketyper, som detaljer om prosedyren eller administrasjon av medikasjon/kontrast bør samles i det samme templatet.\r\n\r\nSvaret på bildediagnostikken vil normalt sett bli rapportert tilbake til den bestillende kliniker som en komponent innenfor rammen av en samlet COMPOSITION-basert rapport.",
+          "misuse" : "Skal ikke brukes til funn ved fysiske undersøkelser. Bruk CLUSTER.exam (Undersøkelsesfunn) eller dennes gruppe av spesialiserte arketyper for dette formålet.\r\n\r\nSkal ikke brukes til å replikere funksjonaliteten til et radiologi informasjonssystem (RIS/PACS) eller kildesystem.\r\n\r\nSkal ikke brukes til å registrere strukturerte detaljer om en klinisk prosedyre som er gjennomført. Bruk da de spesifikke arketypene for prosedyre-relatert innhold, for eksempel ACTION.procedure (Prosedyre).\r\n\r\nBrukes ikke til å registrere informasjon om legemidlene som administreres under en bildediagnostisk undersøkelse. Bruk da de spesifikke legemiddelrelaterte arketypene, for eksempel ACTION.medication (Legemiddelhåndtering).\r\n\r\nSkal ikke brukes til å lagre fotografier eller video i den elektroniske journalen. Bruk arketypen CLUSTER.media_file (Mediafil) for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the findings on imaging examination of a specified body structure or region and their interpretation, using radiological techniques.",
+          "keywords" : [ "image, radiology, modality, xray, CT, ultrasound, MRI, diagnostic, scan, x-ray, imaging, biomagnetic, densitometry, tomography, radiography, magnetic, resonance, mammography, nuclear, medicine, positron, PET, angiography, fluoroscopy" ],
+          "use" : "Use to record the findings on imaging examination of a specified body structure or region and their interpretation, using radiological techniques.\r\n\r\nThis archetype has been designed to focus on the reporting of findings and interpretation associated with a single imaging examination (equivalent to a single DICOM study). References to DICOM-related attributes are included but the focus is on the representation of a clinical report from an imaging examination and not on representing DICOM-related attributes that might be expected within a radiology information system. Specific details about the DICOM series can be recorded using the CLUSTER.imaging_series nested within the 'Series details' SLOT.\r\n\r\nDetailed findings observed during an imaging examination and targeting a specified structure or region can be recorded by nesting the CLUSTER.imaging_exam and/or its family of specialised archetypes within the 'Structured imaging findings' SLOT in this archetype. It is intended that over time the specific detail in each specialisation will grow to include findings using all imaging modalities.\r\n\r\nIf an imaging examination is carried out as part of a more complex activity, such as a surgical operation carried out under imaging guidance, the imaging findings should be recorded using this archetype. \r\nStructured details about the surgical procedure and medications or contrast administered should be recorded using the ACTION.procedure and/or ACTION.medication archetypes, respectively. In this situation, it is recommended that all related archetypes should be reported within the same template.\r\n\r\nThis result will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.",
+          "misuse" : "Not to be used to record findings on physical examination. Use the CLUSTER.exam and/or its family of specialised archetypes for this purpose.\r\n\r\nNot to be used to replicate the functionality or specifications of a radiology information or source system.\r\n\r\nNot to be used to record structured details about any procedure undertaken. Use the specific procedure-related archetypes, such as ACTION.procedure archetype for this purpose.\r\n\r\nNot to be used to record structured details about medications administered during the imaging test. Use specific medication-related archetypes, such as the ACTION.medication archetype for this purpose.\r\n\r\nNot to be used to record photographs or videos  within the health record. Use the CLUSTER.media_file archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.imaging_exam_result.v1",
     "differential" : true,
@@ -3482,16 +4341,7 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0070.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DATE_TIME",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -3531,16 +4381,7 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0071.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DATE_TIME",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -3767,16 +4608,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0106.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_URI",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
