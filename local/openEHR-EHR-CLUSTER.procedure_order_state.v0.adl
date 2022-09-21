@@ -23,20 +23,52 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ae7222f4397347642de47b0c5767cd2c">
+		["MD5-CAM-1.0.1"] = <"b76a14bcc2cd5971769b51be6398cf46">
 		["build_uid"] = <"8d12d11e-a13b-3b36-97e5-9f7afdfe28cc">
 	>
 
 definition
-	CLUSTER[at0000] matches {*}    -- Procedure order state
+	CLUSTER[at0000] matches {    -- Procedure qualifier
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- State
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- draft
+							at0003,    -- ordered
+							at0004]    -- completed
+						}
+					}
+				}
+			}
+		}
+	}
 
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Procedure order state">
-					description = <"Procedure order state">
+					text = <"Procedure qualifier">
+					description = <"	
+Details about a single procedure">
+				>
+				["at0001"] = <
+					text = <"State">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"draft">
+					description = <"Draft">
+				>
+				["at0003"] = <
+					text = <"ordered">
+					description = <"Ordered">
+				>
+				["at0004"] = <
+					text = <"completed">
+					description = <"Completed">
 				>
 			>
 		>
