@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "d4f67d4a47eae7607006e2fb899c3364",
+      "MD5-CAM-1.0.1" : "abe09c0dce5c33d86f4a09bfbd30f739",
       "build_uid" : "7efc32bc-561b-4334-a918-cfed0e233ef2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD",
-      "sem_ver" : "9.4.0"
+      "sem_ver" : "9.5.0"
     },
     "details" : {
       "en" : {
@@ -974,20 +974,10 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.10" ],
+                                  "constraint" : [ "ac0.20" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_BOOLEAN",
-                              "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -1073,6 +1063,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.18",
             "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "fi" : {
@@ -1122,6 +1118,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
             "description" : ""
           }
         },
@@ -1173,6 +1175,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.18",
             "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "de" : {
@@ -1222,6 +1230,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
             "description" : ""
           }
         },
@@ -1273,6 +1287,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.18",
             "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
+            "description" : ""
           }
         },
         "sv" : {
@@ -1322,6 +1342,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.18",
+            "description" : ""
+          },
+          "ac0.20" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.20",
             "description" : ""
           }
         }
@@ -1412,6 +1438,16 @@
         "ac0.18" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.18",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.19",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.20",
           "members" : [ "at0023", "at0024", "at0027" ]
         }
       }
